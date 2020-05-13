@@ -17,6 +17,21 @@ firebase.analytics();
 let db = firebase.database();
 let s = firebase.storage().ref();
 
+window.onload = function(){
+	function newLoginHappened(user){
+		if(user){
+			console.log("user exists");
+			document.cookie = "points=" + (getCookie("points")+1) + "; path=/;";
+		}else{
+			let provider = new firebase.auth.GoogleAuthProvider();
+			firebase.auth().signInWithRedirect(provider);
+			createCookie("points", "0");
+		}
+	}
+}
+
+firebase.auth().onAuthStateChanged(newLoginHappened);
+
 function createCookie(key, value){
 	document.cookie = ""+key+"="+value+"; path=/;";
 }
