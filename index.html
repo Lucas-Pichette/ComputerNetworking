@@ -111,11 +111,12 @@
 						let provider = new firebase.auth.GoogleAuthProvider();
 						firebase.auth().signInWithRedirect(provider);
 					}
+					
+					db.ref('users/' + user.id + '/data').on('value', function(snapshot){
+						console.log('points: ' + snapshot.val());
+					});
 				}
 				
-				db.ref('users/' + user.id + '/data').on('value', function(snapshot){
-					console.log('points: ' + snapshot.val());
-				});
 				
 				firebase.auth().onAuthStateChanged(newLoginHappened);
 			}
