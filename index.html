@@ -98,6 +98,7 @@
 				function newLoginHappened(user){
 					if(user){
 						console.log("user exists");
+						console.log(user);
 						writeUserData(user.id, user.displayName, user.email);
 						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
 							window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
