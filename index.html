@@ -80,6 +80,7 @@
 		  firebase.initializeApp(firebaseConfig);
 		  firebase.analytics();
 			let db = firebase.database();
+			let s = firebase.storage().ref();
 
 			function writeUserData(userId, name, email){
 				db.ref('users/' + userId).set({
@@ -107,6 +108,13 @@
 							window.document.getElementById("bg").setAttribute("style","background-color:#ffd089;");
 						}
 						window.document.getElementById("name").innerHTML = "For, " + user.displayName;
+						const account = {
+							useruid = user.id,
+							calendarEvents: [],
+							email = user.email,
+							points = 0
+						}
+						firebase.firestore().collection('users').doc(user.id).set(account);
 					} else{
 						let provider = new firebase.auth.GoogleAuthProvider();
 						firebase.auth().signInWithRedirect(provider);
