@@ -31,3 +31,4 @@ function getCookie(name){
 	return null;
 }
 
+document.getElementById("replaceMyInner").innerHTML = getCookie("points");
