@@ -1,6 +1,10 @@
+<!DOCTYPE html>
 <html lang="en">
+
 	<head>
-		<link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<link rel="stylesheet" id="ss" type="text/css" href="stylesheets/stylesheet.css">
 		<title>Computer Networking - Lucas Pichette</title>
 		<meta name="description" content="CS 372 Assignments and Walk-Throughs">
 	</head>
@@ -9,21 +13,22 @@
 		<li class="dropdown">
 			<a style="font-size: 42px; text-decoration:none;width:60px" href="javascript:void(0)" class="dropbtn">≡</a>
 			<div class="dropdown-content">
-				<a href="../index.html">Home</a>
+				<a href="index.html">Home</a>
 				<a href="CS476-OSU.html">CS  - 476</a>
 				<a href="AWS-CSA.html">AWS - CSA</a>
 			</div>
 		</li>
-			<li style="float:right;"><a id="img-p" ><abbr class="container" title="Artist: freepik, on flaticon"><img class="img" src="../images/shining.svg"></img><div id="replaceMyInner" class="points">?</div></abbr></a></li>
-		<li style="float:right;"><a id="img" href="https://github.com/Lucas-Pichette"><img class="img" src="../images/white-github.svg"/></a></li>
-		<li style="float:right;"><a id="img" href="https://www.linkedin.com/in/lucas-pichette-77a991159/"><img class="img" src="../images/linkedin.svg"/></a></li>
+			<li style="float:right;"><a id="img" href="profile.html"><abbr class="container" title="Author: freepik, on flaticon"><img id="profile-icon" class="img" src="./images/social-media.svg"></img></abbr></a></li>
+			<li style="float:right;"><a id="img-p" ><abbr class="container" title="Artist: freepik, on flaticon"><img id="points-icon" class="img" src="./images/shining.svg"></img><div id="replaceMyInner" class="points">?</div></abbr></a></li>
+		<li style="float:right;"><a id="img" href="https://github.com/Lucas-Pichette"><img id="github-icon" class="img" src="./images/white-github.svg"/></a></li>
+		<li style="float:right;"><a id="img" href="https://www.linkedin.com/in/lucas-pichette-77a991159/"><img id="linkedin-icon" class="img" src="./images/linkedin.svg"/></a></li>
 	</ul>
 
 	<!-- Just a padder -->
 	<div style="height:50px;"></div>
 
-	<header class="header">
-		<h1>CS 372</h1>
+	<header id="header" class="header">
+		<h1 id="title" >CS 372</h1>
 		<h2>Intro to Computer Networks</h2>
 		
 	</header>
@@ -31,7 +36,7 @@
 	<!-- Just a padder -->
 	<div style="height:50px;"></div>
 
-	<body>
+	<body id="bg">
 		<ul class="section-index">
 			<li class="section-index-title">Index</li>
 			<li class="section-index-subtitle">Week 1</li>
@@ -215,8 +220,8 @@
 			<div class="para">
 				<p class="figure-sidebyside-title">&lt;- &nbsp;Circuit Switching &nbsp;&amp;&nbsp; Packet Switching&nbsp; -&gt;</p>
 			</div>
-			<img class="figure-sidebyside" src="../images/Circuit_Switching_FDM.gif" alt="gif of circuit switching"/>
-			<img class="figure-sidebyside" src="../images/Packet-switching.gif" alt="gif of packet switching"/>
+			<img class="figure-sidebyside" src="./images/Circuit_Switching_FDM.gif" alt="gif of circuit switching"/>
+			<img class="figure-sidebyside" src="./images/Packet-switching.gif" alt="gif of packet switching"/>
 
 			<div class="para">
 				<p>Here's a spreadsheet that includes how to do this, as well as how to do some other mathematical calculations for networking</p>
@@ -250,7 +255,7 @@
 					Time Division Multiplexing is a technique where a short time sample of each channel is inserted into the multiplexed data stream.
 				</p>
 			</div>
-			<img class="figure-wide" src="../images/TDM.png" alt="Image of TDM"/>
+			<img class="figure-wide" src="./images/TDM.png" alt="Image of TDM"/>
 
 			<div class="para">
 				<h5>Statistical Time Division Multiplexing (STDM)</h5>
@@ -259,7 +264,7 @@
 					Statistical Time Division Multiplexing uses intelligent devices capable of identifying when a terminal is idle. They allocate time only to lines when required. This means that more lines can be connected to a transmission medium as this device statistically compensates for normal idle time in data communication lines.
 				</p>
 			</div>
-			<img class="figure-wide" src="../images/STDM.png" alt="Image of STDM"/>
+			<img class="figure-wide" src="./images/STDM.png" alt="Image of STDM"/>
 
 			<div class="para">
 				<h5>Frequency Division Multiplexing (FDM)</h5>
@@ -268,7 +273,7 @@
 					A circuit-switched based network which allocates partitions of bandwidth in 'frequencies' to multiple users over time.
 				</p>
 			</div>
-			<img class="figure-wide" src="../images/FDM.png" alt="Image of FDM"/>
+			<img class="figure-wide" src="./images/FDM.png" alt="Image of FDM"/>
 			<!-- Just a padder -->
 			<div style="height:100px;"></div>
 		</section>
@@ -310,7 +315,7 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Transmission Delay: The time it takes to get packet(s) into the <b>propagation medium</b>. The propagation medium is whatever method the packet(s) use to get from client location to destination, that being something like: coaxial wire, fibre optic cables, satellite, etc. <em>This would be you entering the room for the movie you're going to watch.</em><br><br>
 					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Propagation Delay: The length of time taken for all packet(s) to reach the destination. <em>This would be you finally finish the movie.</em><br>
 				</p>
-				<img class="figure" src="../images/four_sources_of_packet_delay.png" alt="four_sources_of_packet_delay.png"/>
+				<img class="figure" src="./images/four_sources_of_packet_delay.png" alt="four_sources_of_packet_delay.png"/>
 
 				<h5>Transmission Control Protocol (TCP) vs User Datagram Protocol (UDP)</h5>
 				<p>
@@ -367,8 +372,8 @@
 		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-storage.js"></script>
 		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
 		
-		<script src="../scripts/script.js"></script>
-		<script src="../scripts/CS372.js"></script>
+		<script src="./scripts/script.js"></script>
+		<script src="./scripts/CS372.js"></script>
 	</body>
 	
 </html>

@@ -32,3 +32,44 @@ function getCookie(name){
 }
 
 document.getElementById("replaceMyInner").innerHTML = getCookie("points");
+
+function setPurple(){
+	createCookie("background-color", "background-color: #ecdeff;");
+	location.reload();
+}
+
+function setWhite(){
+	createCookie("background-color", "background-color: white;");
+	location.reload();
+}
+
+function setBlack(){
+	createCookie("background-color", "background-color: #525151;");
+	
+	location.reload();
+}
+
+document.getElementById("bg").setAttribute("style", getCookie("background-color"));
+
+
+if(getCookie("background-color") == "background-color: #525151"){
+	document.getElementById("ss").setAttribute("href","stylesheets/dark.css");
+	document.getElementById("profile-icon").setAttribute("src","images/social-media.svg");
+	document.getElementById("points-icon").setAttribute("src","images/shining.svg");
+	document.getElementById("github-icon").setAttribute("src","images/white-github.svg");
+	document.getElementById("linkedin-icon").setAttribute("src","images/linkedin.svg");
+}
+
+if(getCookie("background-color") == "background-color: white"){
+	document.getElementById("ss").setAttribute("href","stylesheets/stylesheet.css");
+	document.getElementById("profile-icon").setAttribute("src","images/social-media.svg");
+	document.getElementById("points-icon").setAttribute("src","images/shining.svg");
+	document.getElementById("github-icon").setAttribute("src","images/white-github.svg");
+	document.getElementById("linkedin-icon").setAttribute("src","images/linkedin.svg");
+}
+
+if(getCookie("background-color") == "background-color: #ecdeff"){
+	document.getElementById("ss").setAttribute("href","stylesheets/purple.css");
+}
+
+
