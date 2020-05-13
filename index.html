@@ -99,7 +99,7 @@
 					if(user){
 						console.log("user exists");
 						console.log(user);
-						writeUserData(user.id, user.displayName, user.email);
+						writeUserData(user.uid, user.displayName, user.email);
 						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
 							window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
 						} 
@@ -114,13 +114,13 @@
 						}
 						window.document.getElementById("name").innerHTML = "For, " + user.displayName;
 						const account = {
-							useruid: user.id,
+							useruid: user.uid,
 							calendarEvents: [],
 							email: user.email,
 							points: 0
 						}
-						console.log('user id: ' + user.id);
-						firebase.firestore().collection('users').doc(user.id).set(account);
+						console.log('user id: ' + user.uid);
+						firebase.firestore().collection('users').doc(user.uid).set(account);
 					} else{
 						let provider = new firebase.auth.GoogleAuthProvider();
 						firebase.auth().signInWithRedirect(provider);
