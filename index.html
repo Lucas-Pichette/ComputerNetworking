@@ -87,8 +87,8 @@
 			let s = firebase.storage().ref();
 
 			function createCookie(key, value){
-				document.cookie = escape(key) + "=" escape(value) + "; path=/;";
-				//document.cookie = ""+key+"="+value+"; path=/;";
+				//document.cookie = escape(key) + "=" escape(value) + "; path=/;";
+				document.cookie = ""+key+"="+value+"; path=/;";
 			}
 
 			function getCookie(name){
@@ -101,7 +101,7 @@
 					if(end==-1){
 						end = document.cookie.length;
 					}
-					return unescape(document.cookie.substring(start, end));
+					return document.cookie.substring(start, end);
 				}
 				return "";
 			}
