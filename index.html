@@ -21,7 +21,7 @@
 					<a href="pages/AWS-CSA.html">AWS - CSA</a>
 				</div>
 			</li>
-			<li style="float:right;"><a id="img-p" ><abbr title="Artist: freepik, on flaticon"><img class="img" src="images/shining.svg"></img></abbr></a></li>
+			<li style="float:right;"><a id="img-p" ><abbr class="container" title="Artist: freepik, on flaticon"><img class="img" src="images/shining.svg"></img><div id="replaceMyInner" class="points">?</div></abbr></a></li>
 			<li style="float:right;"><a id="img" href="https://github.com/Lucas-Pichette"><img class="img" src="images/white-github.svg"/></a></li>
 			<li style="float:right;"><a id="img" href="https://www.linkedin.com/in/lucas-pichette-77a991159/"><img class="img" src="images/linkedin.svg"/></a></li>
 		</ul>
@@ -165,13 +165,13 @@
 				firebase.auth().onAuthStateChanged(newLoginHappened);
 			}
 
-			if(window.document.getElementById("img-p").matches(':hover')){
-				window.document.getElementById("img-p").innerHTML = getCookie("points");
-			} else if(window.document.getElementById("img-p").src == "images/shining.svg"){
-				// do nothing
-			} else{
-				window.document.getElementById("img-p").src = "images/shining.svg";
+			/*if(window.document.getElementById("img-p").matches(':hover')){
+				window.document.getElementById("img-p").src = "";
 			}
+			window.document.getElementById("img-p-abbr").setAttribute('title', getCookie("points"));
+			*/
+
+			window.document.getElementById("replaceMyInner").innerHTML = getCookie("points");
 		</script>
 	</body>
 
