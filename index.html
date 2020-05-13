@@ -54,125 +54,14 @@
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
 		<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
 
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
-		
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
-		
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-functions.js"></script>
-		
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-storage.js"></script>
-		
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
-
-		<!-- TODO: Add SDKs for Firebase products that you want to use
-		     https://firebase.google.com/docs/web/setup#available-libraries -->
 		<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
-
-		<script>
-		  // Your web app's Firebase configuration
-		  var firebaseConfig = {
-		    apiKey: "AIzaSyBIrORQafmq65UfCANcQ4keEGv140m7Ufw",
-		    authDomain: "computernetworking-5f028.firebaseapp.com",
-		    databaseURL: "https://computernetworking-5f028.firebaseio.com",
-		    projectId: "computernetworking-5f028",
-		    storageBucket: "computernetworking-5f028.appspot.com",
-		    messagingSenderId: "90100809260",
-		    appId: "1:90100809260:web:cb5158022a37d420879b89",
-		    measurementId: "G-GPC2XRKC7E",
-				databaseURL: "https://computernetworking-5f028.firebaseio.com"
-		  };
-		  // Initialize Firebase
-		  firebase.initializeApp(firebaseConfig);
-		  firebase.analytics();
-			let db = firebase.database();
-			let s = firebase.storage().ref();
-
-			function createCookie(key, value){
-				//document.cookie = escape(key) + "=" escape(value) + "; path=/;";
-				document.cookie = ""+key+"="+value+"; path=/;";
-			}
-
-			/*function getCookie(cname){
-				if(document.cookie.length > 0){
-					let start = document.cookie.indexOf(cname + "=");
-					let endc = 0;
-					if(start!=-1){
-						start=start+cname+1;
-						endc=document.cookie.indexOf(";",start);
-					}
-					if(endc==-1){
-						endc = document.cookie.length;
-					}
-					return document.cookie.substring(start, endc);
-				}
-				return "";
-			}*/
-
-			function getCookie(name){
-				let nameEQ = name + "=";
-				let ca = document.cookie.split(';');
-				for(var i=0; i < ca.length; i++){
-					let c = ca[i];
-					while(c.charAt(0)==' ') c = c.substring(1,c.length);
-					if(c.indexOf(nameEQ)==0) return c.substring(nameEQ.length, c.length);
-				}
-				return null;
-			}
-
-		  window.onload = function(){
-				function newLoginHappened(user){
-					if(user){
-						console.log("user exists");
-						//document.cookie = "points=" + (getCookie("points")+1) + "; path=/;";
-						/*db.collection("users").doc(authData.uid).set({
-							email: authData.email,
-							id: authData.uid,
-							name: authData.name,
-							points:0
-						});*/
-						createCookie("points",(parseInt(getCookie("points"))+1));
-
-
-						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
-							window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
-						} 
-						else if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'u' || user.displayName[1] == 'U'){
-							window.document.getElementById("bg").setAttribute("style","background-color:#f4faff;");
-						} 
-						if((user.displayName[0] == 'm' || user.displayName[0] == 'M')){
-							window.document.getElementById("bg").setAttribute("style","background-color:#c3b4ff;");
-						} 
-						else if(user.displayName[0] == 'r' || user.displayName[0] == 'R'){
-							window.document.getElementById("bg").setAttribute("style","background-color:#ffd089;");
-						}
-						window.document.getElementById("name").innerHTML = "For, " + user.displayName;
-					} else{
-						let provider = new firebase.auth.GoogleAuthProvider();
-						firebase.auth().signInWithRedirect(provider);
-						createCookie("points", "0");
-					}
-
-					/*db.ref('users/' + user.id + '/data').set({
-						points: 0
-					});*/
-					
-					/*db.ref('users/' + user.id + '/data').put('value', function(snapshot){
-						console.log('points: ' + snapshot.val());
-					});*/
-				}
-				
-				
-				firebase.auth().onAuthStateChanged(newLoginHappened);
-			}
-
-			/*if(window.document.getElementById("img-p").matches(':hover')){
-				window.document.getElementById("img-p").src = "";
-			}
-			window.document.getElementById("img-p-abbr").setAttribute('title', getCookie("points"));
-			*/
-
-			window.document.getElementById("replaceMyInner").innerHTML = getCookie("points");
-		</script>
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-functions.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-storage.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
+		
+		<script src="scripts/script.js"></script>
 	</body>
 
 </html>
