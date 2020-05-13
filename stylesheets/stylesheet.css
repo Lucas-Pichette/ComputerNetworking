@@ -206,13 +206,18 @@ div.para > p.figure-title{
 		height:55px;
 		background-color:rgba(107, 255, 252, 0.11);
 	}
+	
+	#img-p:hover{
+		height:55px;
+		background-color:rgba(107, 255, 252, 0.11);
+	}
 
-	.img{
+	.img, .img-p{
 		width:60px;
 		height:36px;
 		padding-top:6px;
 	}
-
+	
 	ul.nav_bar > li {
 		float: left;
 	}
