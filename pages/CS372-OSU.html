@@ -1,0 +1,372 @@
+<html lang="en">
+	<head>
+		<link rel="stylesheet" type="text/css" href="../stylesheets/stylesheet.css">
+		<title>Computer Networking - Lucas Pichette</title>
+		<meta name="description" content="CS 372 Assignments and Walk-Throughs">
+	</head>
+
+	<ul class="nav_bar">
+		<li class="dropdown">
+			<a style="font-size: 42px; text-decoration:none;width:60px" href="javascript:void(0)" class="dropbtn">≡</a>
+			<div class="dropdown-content">
+				<a href="../index.html">Home</a>
+				<a href="CS476-OSU.html">CS  - 476</a>
+				<a href="AWS-CSA.html">AWS - CSA</a>
+			</div>
+		</li>
+		<li style="float:right;"><a id="img" href="https://github.com/Lucas-Pichette"><img class="img" src="../images/white-github.svg"/></a></li>
+		<li style="float:right;"><a id="img" href="https://www.linkedin.com/in/lucas-pichette-77a991159/"><img class="img" src="../images/linkedin.svg"/></a></li>
+	</ul>
+
+	<!-- Just a padder -->
+	<div style="height:50px;"></div>
+
+	<header class="header">
+		<h1>CS 372</h1>
+		<h2>Intro to Computer Networks</h2>
+		
+	</header>
+
+	<!-- Just a padder -->
+	<div style="height:50px;"></div>
+
+	<body>
+		<ul class="section-index">
+			<li class="section-index-title">Index</li>
+			<li class="section-index-subtitle">Week 1</li>
+			<li><a class="nav_main" href="#Brief and Basic Introduction">1.0 Brief and Basic Introduction</a></li>
+			<li><a class="nav_main" href="#Overview of Networking">1.1 Overview of Networking</a></li>
+			<li><a class="nav_main" href="#Circuit Switching and Packet Switching">1.2 Circuit Switching and Packet Switching</a></li>
+			<li><a class="nav_main" href="#Packet Switched vs. Circuit Switched Networks">1.3 Packet Switched vs. Circuit Switched Networks</a></li>
+			<li><a class="nav_main" href="#Network Structure and Performance">1.4 Network Structure and Performance</a></li>
+
+			<li class="section-index-subtitle">Week 2</li>
+			<li><a class="nav_main" href="#Access Networks and Physical Media">2.0 Access Networks and Physical Media</a></li>
+		</ul>
+
+		<a class="to-top">
+			<div>
+				<h1>i</h1>
+			</div>
+		</a>
+
+
+		<!-- Just a padder -->
+		<div style="height:100px;"></div>
+		<hr width="80%">
+		<div style="height:100px;"></div>
+
+
+
+		<section id="Brief and Basic Introduction">
+			<div class="para">
+				<h4>Brief and Basic Introduction</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Preliminaries&quot; Lecture, from Oregon State University, Corvallis, OR, April 29, 2020."><sup>[1]</sup></abbr>
+
+				<h5>Network</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<em class="highlight">A system for connecting computers using a <b>single transmission technology</b></em>. A transmission technology is, as of now, either: <b>broadcast networks</b>, or <b>point-to-point networks</b>. Broadcast networks have a single communication channel that is shared by all of the machines in the network; Packets sent by any machine are received by all machines. Point-to-point networks consist of many connections between individual pairs of machines, occasionally needing to go through intermediate computers before reaching the desired 
+					computer. 
+				</p>
+				<div class="note">
+					A general rule is as follows:<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Small localized networked (e.g. LAN) tend to use broadcast transmission, whereas networks located over wide geographical areas (e.g. WAN) use point-to-point transmission.
+				</div>
+
+				<h5>Internet</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					A set of networks connected by routers that are configured to communicate among a variety of network transmission technologies; <em class="highlight">A network of networks</em>
+				</p>
+			</div>
+			<img class="figure" src="../images/network_and_internet_ex1.png" alt="Network and Internet Image"/>
+
+			<div class="para">
+				<h5>Packet Switches</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<em class="highlight">Forwards <b>packets</b>.</em> We turn data into chunks of data called packets to allow it to move more efficiently; One packet could be an entire image, or many packets could make up one image, it all depends upon the size of your image. When you think of packet switches think of routers and switches.
+				</p>
+
+				<h5>Bandwidth</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					The <em class="highlight">transmission rate</em> of packets through a transmission technology.
+				</p> 
+
+				<p>We have now reached the end of the Brief and Basic Introduction section. The following is a quizlet regarding the concepts we covered.</p>
+
+				<h5>Ethernet</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<em class="highlight">Ethernet is a networking standard that made local networking possible.</em> Several other standards exist.
+				</p> 
+
+				<h5>TCP/IP</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<em class="highlight">Trasmission Control Protocol / Internet Protocol. Made <b>internetworking</b> possible.</em> Internetworking is the communication between networks; 'the internet'.
+				</p> 
+
+				<h5>Metrics</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Speed is measured in electronic units (bits/second=bps), where: K = 10<sup>3</sup>, M = 10<sup>6</sup>, G = 10<sup>9</sup>, etc. (e.g. 8Mbps = 8,000,000 bps)
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Size is measured in bits, where: Ki = 2<sup>10</sup>, Mi = 2<sup>20</sup>, Gi = 2<sup>30</sup>, etc. (e.g. 1GiB = 1,073,741,824 bits)
+				</p> 
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Use lower-case b for bits, upper-case B for Bytes. Being where: 1Mib = 128KiB; 1Mib = 1024Kib.
+				</p> 
+
+				<!-- Just a padder -->
+				<div style="height:50px;"></div>
+
+				<p><b>We have now reached the end of the Brief and Basic Introduction section.</b> The following is a quizlet regarding the concepts we covered.</p><br>
+			</div>
+			<iframe src="https://quizlet.com/505187528/match/embed?i=2oaj5m&x=1jj1" class="quizlet"></iframe>
+		</section>
+
+
+
+		<!-- Just a padder -->
+		<div style="height:100px;"></div>
+		<hr width="80%">
+		<div style="height:100px;"></div>
+
+
+
+		<section id="Overview of Networking">
+			<div class="para">
+				<h4>Overview of Networking</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Overview of Networking&quot; Lecture, from Oregon State University, Corvallis, OR, April 29, 2020."><sup>[2]</sup></abbr>
+
+				<h5>Protocols</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					<em class="highlight">A protocol is a set of guidelines for communication among network entities.</em> A protocol defines two things: <br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Format and order of messages sent and received among network entities.<br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Actions taken on message transmission and receipt.<br>
+				</p>
+
+				<h5>Network Structure</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Networks take on the form of the following structures:<br><br>
+					
+					&nbsp;&nbsp;&nbsp;&nbsp; <u>Network Edge</u>: Consists of hosts and applications, also including clients and servers.<br>
+					
+					&nbsp;&nbsp;&nbsp;&nbsp; <u>Network Core</u>: Consists of interconnected routers; a network of networks (network cores exist within the internet, they are not synonomous).<br>
+					
+					&nbsp;&nbsp;&nbsp;&nbsp; <u>Physical Media</u>: Communication links<br>
+				</p>
+
+				<h5>End Systems</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					End systems ("hosts") are individual computers that intitiate requests or provide services (e.g. personal computers, cellphones, server computers, etc).
+				</p>
+
+				<h5>Client/Server Model</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Hosts and servers communicate with one another via intermediate 'always on' computers; <em class="highlight">Client host requests/receives service from a server that is 'always on'</em> (e.g. If you go on your browser and open up your email, then: Your browser is the client and the email is the server; Your list of emails is provided by your communication as the client with the email client/server).
+				</p>
+
+				<h5>Peer-to-peer model (P2P)</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Minimal or no use of dedicated servers. <em class="highlight">Directly from a user machine to a user machine.</em> Think of Skype or BitTorrent.
+				</p>
+			</div>
+			<iframe src="https://quizlet.com/505377483/match/embed?i=2oaj5m&x=1jj1" class="quizlet"></iframe>
+		</section>
+
+
+
+		<!-- Just a padder -->
+		<div style="height:100px;"></div>
+		<hr width="80%">
+		<div style="height:100px;"></div>
+		
+		
+		
+		<section id="Circuit Switching and Packet Switching">
+			<div class="para">
+				<h4>Circuit Switching and Packet Switching</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Circuit Switching and Packet Switching&quot; Lecture, from Oregon State University, Corvallis, OR, April 29, 2020."><sup>[3]</sup></abbr>
+
+				<h5>How is data transferred through a network?</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Two main ways: Circuit switching and packet switching.<br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Circuit switching: dedicated circuit per call (telephone network). All bandwidth is dedicated to two machines for a period of time. (<abbr title="Time Division Multiplexing">TDM</abbr>) --phased out<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Packet switching: Data sent through net in discrete packets on shared media. Network core focuses on forwarding all of these packets to the correct locations.<br>
+				</p>
+
+				<h5>Packet Switched Network</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					Primary functions: Packet transmission, packet interpretation, and packet fragmentation.
+				</p>
+
+				<h5>Circuit Switched Network</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+				</p>
+			</div>
+			
+			<div class="para">
+				<p class="figure-sidebyside-title">&lt;- &nbsp;Circuit Switching &nbsp;&amp;&nbsp; Packet Switching&nbsp; -&gt;</p>
+			</div>
+			<img class="figure-sidebyside" src="./Circuit_Switching_FDM.gif" alt="gif of circuit switching"/>
+			<img class="figure-sidebyside" src="./Packet-switching.gif" alt="gif of packet switching"/>
+
+			<div class="para">
+				<p>Here's a spreadsheet that includes how to do this, as well as how to do some other mathematical calculations for networking</p>
+				<iframe src="https://onedrive.live.com/embed?resid=21784F771Ce8121F%214488&authkey=%21AJpD9VpsK2ncLZ0&em=2&wdAllowInteractivity=True&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True" class="quizlet"></iframe>
+			</div>
+		</section>
+
+
+
+		<!-- Just a padder -->
+		<div style="height:100px;"></div>
+		<hr width="80%">
+		<div style="height:100px;"></div>
+
+
+
+		<section id="Packet Switched vs. Circuit Switched Networks">
+			<div class="para">
+				<h4>Packet Switched vs. Circuit Switched Networks</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Packet Switched vs Circuit Switched Networks&quot; Lecture, from Oregon State University, Corvallis, OR, May 1, 2020."><sup>[4]</sup></abbr><abbr class="cite" title="&quot;26. Multiplexing (Cont'd) - Introduction To Data Communications&quot;. 2020. Telecomworld101.Com. Accessed May 1 2020. http://www.telecomworld101.com/Intro2dcRev2/page99.html."><sup>[5]</sup></abbr>
+
+				<h5>Multiplexing</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Multiplexing means to combine, or mix-together. De-multiplexing means to separate out again.<br>
+					Statistical Multiplexing refers to the way in which packet-switched networks share network resources.
+				</p>
+
+				<h5>Time Division Multiplexing (TDM)</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Time Division Multiplexing is a technique where a short time sample of each channel is inserted into the multiplexed data stream.
+				</p>
+			</div>
+			<img class="figure-wide" src="./TDM.png" alt="Image of TDM"/>
+
+			<div class="para">
+				<h5>Statistical Time Division Multiplexing (STDM)</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Statistical Time Division Multiplexing uses intelligent devices capable of identifying when a terminal is idle. They allocate time only to lines when required. This means that more lines can be connected to a transmission medium as this device statistically compensates for normal idle time in data communication lines.
+				</p>
+			</div>
+			<img class="figure-wide" src="./STDM.png" alt="Image of STDM"/>
+
+			<div class="para">
+				<h5>Frequency Division Multiplexing (FDM)</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					A circuit-switched based network which allocates partitions of bandwidth in 'frequencies' to multiple users over time.
+				</p>
+			</div>
+			<img class="figure-wide" src="./FDM.png" alt="Image of FDM"/>
+		</section>
+
+
+
+		<!-- Just a padder -->
+		<div style="height:100px;"></div>
+		<hr width="80%">
+		<div style="height:100px;"></div>
+
+
+
+		<section id="Network Structure and Performance">
+			<div class="para">
+				<h4>Network Structure and Performance</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Network Structure and Performance&quot; Lecture, from Oregon State University, Corvallis, OR, May 1, 2020."><sup>[6]</sup></abbr>
+
+				<h5>Internet Heirarchy</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					In order of tier (From highest to lowest):<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					1. Tier 1 providers have networks that span countries and satellites that circle the globe. Tier 1 providers include the large telecoms, Google, and others.<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					2. Larger regional ISP’s, Internet Exchange Points (IXP’s)<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					3. Local Internet Service Providers (ISP’s). Their networks are called access networks because they provide access to the internet.<br>
+				</p>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Although the internet is hierarchical, there are direct connections between tiers that have come about through business relationships.
+				</p>
+				<img class="figure" src="../images/internet_heirarchy.png" alt="image of internet heirarchy"/>
+
+				<h5>Four Sources of Packet Delay</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					Nodal Delay: The accumulation of processing, queueing, transmission, and propagation delay. It is the time from data sent to data received.<br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1. Processing Delay: The time taken to create and attach a header to packet(s) of data, created from destination data and protocol guidelines. <em>Think of sitting at home charting on a map how you will get to the movie theatre you're wanting to watch a movie at. You need to recognize the laws of the streets you're taking, and consider how to get there the fastest. This map is the header and you (and whoever you're taking, if anyone) is the data/packet.</em><br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2. Queueing Delay: The time taken waiting for packet to initiate transmission. <em>Think of standing in line to get a movie ticket, you're waiting for your turn to even enter the movie theater, much less to get to the correct room or finish the movie.</em><br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3. Transmission Delay: The time it takes to get packet(s) into the <b>propagation medium</b>. The propagation medium is whatever method the packet(s) use to get from client location to destination, that being something like: coaxial wire, fibre optic cables, satellite, etc. <em>This would be you entering the room for the movie you're going to watch.</em><br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4. Propagation Delay: The length of time taken for all packet(s) to reach the destination. <em>This would be you finally finish the movie.</em><br>
+				</p>
+				<img class="figure" src="../images/four_sources_of_packet_delay.png" alt="four_sources_of_packet_delay.png"/>
+
+				<h5>Transmission Control Protocol (TCP) vs User Datagram Protocol (UDP)</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+					TCP: Safe and reliable data transfer protocol. Requires a 3-way handshake; The first computer (instigator of connection) sends a 'SYN', the second computer (receiver of instigation) accepts/denies this SYN Provides and if accepting sends back a 'SYN ACK', finally the first computer upon receiving and accepting this SYN ACK sends back a 'ACK RECEIVED'. TCP has the following features:<br><br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					1. Reliable Data Transmission (Guaruntee of data delivery; if lost is resent)<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					2. Flow Control<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					3. Connection-oriented Service<br>
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					4. Congestion Control<br>
+					<br><br>
+					UDP: Connection-less fast data-transfer protocol, no session established. Known as the 'fire and forget' protocol. UDP pretty much offers no features other than being fast.
+			</div>
+		</section>
+
+
+
+		<!-- Just a padder -->
+		<div style="height:100px;"></div>
+		<hr width="80%">
+		<hr width="80%">
+		<div style="height:100px;"></div>
+
+
+
+		<section id="Access Networks and Physical Media">
+			<div class="para">
+				<h4>Access Networks and Physical Media</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Access Networks and Physical Media&quot; Lecture, from Oregon State University, Corvallis, OR, May 1, 2020."><sup>[7]</sup></abbr>
+
+				<h5>Access Networks</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+				</p>
+			</div>
+		</section>
+
+
+		<!-- Just a padder -->
+		<div style="height:50px;"></div>
+
+		<footer>
+			<span>Created by: <a class="contact-info" href="about-me.html">Lucas Pichette</a></span>
+			<div class="sep-cont"></div>
+			<span>Contact Information: <a class="contact-info" href="mailto:lucascpichette@gmail.com">lucascpichette@gmail.com</a></span>
+		</footer>
+
+	</body>
+	
+</html>

@@ -1,0 +1,93 @@
+<html lang="en">
+	
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css">
+		<title>Computer Networking - Lucas Pichette</title>
+		<meta name="description" content="My Computer Networking Portfolio">
+		<script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+	</head>
+
+	<body id="bg">
+
+		<ul class="nav_bar">
+			<li class="dropdown">
+				<a style="font-size: 42px; text-decoration:none;width:60px" href="javascript:void(0)" class="dropbtn">≡</a>
+				<div class="dropdown-content">
+					<a href="pages/CS372-OSU.html">CS  - 372</a>
+					<a href="pages/CS476-OSU.html">CS  - 476</a>
+					<a href="pages/AWS-CSA.html">AWS - CSA</a>
+				</div>
+			</li>
+			<li style="float:right;"><a id="img" href="https://github.com/Lucas-Pichette"><img class="img" src="images/white-github.svg"/></a></li>
+			<li style="float:right;"><a id="img" href="https://www.linkedin.com/in/lucas-pichette-77a991159/"><img class="img" src="images/linkedin.svg"/></a></li>
+		</ul>
+
+		<!-- Just a padder -->
+		<div style="height:50px;"></div>
+
+		<header class="header">
+			<h1>Computer Networking</h1>
+		</header>
+
+		<!-- Just a padder -->
+		<div style="height:50px;"></div>
+
+		<h3>Providing accurate and useful networking information.</h3>
+
+		<h3 id="name">Test</h3>
+
+		<!-- Just a padder -->
+		<div style="height:50px;"></div>
+
+		<footer class="home">
+			<span>Created by: <a class="contact-info" href="pages/about-me.html">Lucas Pichette</a></span>
+			<div class="sep-cont"></div>
+			<span>Contact Information: <a class="contact-info" href="mailto:lucascpichette@gmail.com">lucascpichette@gmail.com</a></span>
+		</footer>
+
+
+		<!-- The core Firebase JS SDK is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+
+		<!-- TODO: Add SDKs for Firebase products that you want to use
+		     https://firebase.google.com/docs/web/setup#available-libraries -->
+		<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
+
+		<script>
+		  // Your web app's Firebase configuration
+		  var firebaseConfig = {
+		    apiKey: "AIzaSyBIrORQafmq65UfCANcQ4keEGv140m7Ufw",
+		    authDomain: "computernetworking-5f028.firebaseapp.com",
+		    databaseURL: "https://computernetworking-5f028.firebaseio.com",
+		    projectId: "computernetworking-5f028",
+		    storageBucket: "computernetworking-5f028.appspot.com",
+		    messagingSenderId: "90100809260",
+		    appId: "1:90100809260:web:cb5158022a37d420879b89",
+		    measurementId: "G-GPC2XRKC7E"
+		  };
+		  // Initialize Firebase
+		  firebase.initializeApp(firebaseConfig);
+		  firebase.analytics();
+
+		  window.onload = function(){
+			function newLoginHappened(user){
+				if(user){
+					document.getElementById("bg").attribute("background-color","red");
+					document.getElementById("name").innerHTML = "Yo, " + user.displayName;
+				} else{
+					let provider = new firebase.auth.GoogleAuthProvider();
+					firebase.auth().signInWithRedirect(provider);
+				}
+			}
+		  	
+		  	firebase.auth().onAuthStateChanged(newLoginHappened);
+		  }
+		</script>
+	</body>
+
+</html>
