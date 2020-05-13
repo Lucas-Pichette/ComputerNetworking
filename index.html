@@ -85,21 +85,27 @@
 		  firebase.analytics();
 			let db = firebase.database();
 			let s = firebase.storage().ref();
+			let ref = new Firebase("https://computernetworking-5f028.firebaseio.com");
 
-			function writeUserData(userId, name, email){
-				/*db.ref('users/' + userId).set({
-					username: name,
-					email: email
-				});*/
-				console.log("wrote user data to firebase");
-			}
+			ref.onAuth(function(authData){
+				if(authData && isNewUser){
+					ref.child("users").child(authData.uid).set({
+						provider: authData.provider,
+						name: getName(authData)
+					});
+					db.collection("users").doc(authData.uid).set({
+						email: authData.email,
+						id: authData.uid,
+						name: authData.name,
+						points:0
+					});
+				}
+			});
 
 		  window.onload = function(){
 				function newLoginHappened(user){
 					if(user){
 						console.log("user exists");
-						console.log(user);
-						writeUserData(user.uid, user.displayName, user.email);
 						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
 							window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
 						} 
@@ -113,14 +119,6 @@
 							window.document.getElementById("bg").setAttribute("style","background-color:#ffd089;");
 						}
 						window.document.getElementById("name").innerHTML = "For, " + user.displayName;
-						const account = {
-							useruid: user.uid,
-							calendarEvents: [],
-							email: user.email,
-							points: 0
-						}
-						console.log('user id: ' + user.uid);
-						firebase.firestore().collection('users').doc(user.uid).set(account);
 					} else{
 						let provider = new firebase.auth.GoogleAuthProvider();
 						firebase.auth().signInWithRedirect(provider);
