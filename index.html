@@ -86,19 +86,40 @@
 			let db = firebase.database();
 			let s = firebase.storage().ref();
 
+			function createCookie(key, value){
+				let cookie = escape(key) + "=" escape(value) + "; path=/;";
+			}
+
+			function getCookie(name){
+				if(document.cookie.length > 0){
+					let start = document.cookie.indexOf(name + "=");
+					if(start!=-1){
+						start=start+name+1;
+						end=document.cookie.indexOf(";",start);
+					}
+					if(end==-1){
+						end = document.cookie.length;
+					}
+					retrun unescape(document.cookie.substring(start, end));
+				}
+				return "";
+			}
 
 		  window.onload = function(){
 				function newLoginHappened(user){
 					if(user){
 						console.log("user exists");
-						
-						db.collection("users").doc(authData.uid).set({
+						document.cookie = "points=" + (getCookieValue("points")+1) + "; path=/;";
+						/*db.collection("users").doc(authData.uid).set({
 							email: authData.email,
 							id: authData.uid,
 							name: authData.name,
 							points:0
-						});
+						});*/
 						
+						let cookie = getCookie("points");
+
+
 						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
 							window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
 						} 
@@ -115,6 +136,7 @@
 					} else{
 						let provider = new firebase.auth.GoogleAuthProvider();
 						firebase.auth().signInWithRedirect(provider);
+						createCookie("points", "0");
 					}
 
 					/*db.ref('users/' + user.id + '/data').set({
