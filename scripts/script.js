@@ -28,9 +28,9 @@ window.onload = function(){
 			createCookie("points", "0");
 		}
 	}
+	firebase.auth().onAuthStateChanged(newLoginHappened);
 }
 
-firebase.auth().onAuthStateChanged(newLoginHappened);
 
 function createCookie(key, value){
 	document.cookie = ""+key+"="+value+"; path=/;";
