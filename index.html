@@ -38,6 +38,7 @@
 		<h3>Providing accurate and useful networking information.</h3>
 
 		<h3 id="name">Test</h3>
+		<h3 id="fav-num">Test</h3>
 
 		<!-- Just a padder -->
 		<div style="height:50px;"></div>
@@ -53,6 +54,8 @@
 		<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
 
 		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
+		
+		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
 
 		<!-- TODO: Add SDKs for Firebase products that you want to use
 		     https://firebase.google.com/docs/web/setup#available-libraries -->
@@ -69,15 +72,26 @@
 		    messagingSenderId: "90100809260",
 		    appId: "1:90100809260:web:cb5158022a37d420879b89",
 		    measurementId: "G-GPC2XRKC7E"
+				databaseURL: "https://computernetworking-5f028.firebaseio.com"
 		  };
 		  // Initialize Firebase
 		  firebase.initializeApp(firebaseConfig);
 		  firebase.analytics();
+			let db = firebase.database();
+
+			function writeUserData(userId, name, email){
+				db.ref('users/' + userId).set({
+					username: name,
+					email: email
+				});
+				console.log("wrote user data to firebase");
+			}
 
 		  window.onload = function(){
 			function newLoginHappened(user){
 				if(user){
 					console.log("user exists");
+					writeUserData(user.id, user.displayName, user.email);
 					if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
 						window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
 					} 
@@ -96,8 +110,11 @@
 					firebase.auth().signInWithRedirect(provider);
 				}
 			}
-		  	
-				firebase.auth().onAuthStateChanged(newLoginHappened);
+			db.ref('users/' + user.id + '/data').on('value', function(snapshot){
+				console.log('points: ' + snapshot.val());
+			});
+			}
+			firebase.auth().onAuthStateChanged(newLoginHappened);
 		  }
 		</script>
 	</body>
