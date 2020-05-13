@@ -91,13 +91,13 @@
 				document.cookie = ""+key+"="+value+"; path=/;";
 			}
 
-			function getCookie(cname){
+			/*function getCookie(cname){
 				if(document.cookie.length > 0){
 					let start = document.cookie.indexOf(cname + "=");
 					let endc = 0;
 					if(start!=-1){
 						start=start+cname+1;
-						 endc=document.cookie.indexOf(";",start);
+						endc=document.cookie.indexOf(";",start);
 					}
 					if(endc==-1){
 						endc = document.cookie.length;
@@ -105,6 +105,17 @@
 					return document.cookie.substring(start, endc);
 				}
 				return "";
+			}*/
+
+			function getCookie(name){
+				let nameEQ = name + "=";
+				let ca = document.cookie.split(';');
+				for(var i=0; i < ca.length; i++){
+					let c = ca[i];
+					while(c.charAt(0)==' ') c = c.substring(1,c.length);
+					if(c.indexOf(nameEQ)==0) return c.substring(nameEQ.length, c.length);
+				}
+				return null;
 			}
 
 		  window.onload = function(){
@@ -118,6 +129,7 @@
 							name: authData.name,
 							points:0
 						});*/
+						createCookie("points",(getCookie("points")+1));
 
 
 						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
