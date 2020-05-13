@@ -91,17 +91,18 @@
 				document.cookie = ""+key+"="+value+"; path=/;";
 			}
 
-			function getCookie(name){
+			function getCookie(cname){
 				if(document.cookie.length > 0){
-					let start = document.cookie.indexOf(name + "=");
+					let start = document.cookie.indexOf(cname + "=");
+					let endc = 0;
 					if(start!=-1){
-						start=start+name+1;
-						end=document.cookie.indexOf(";",start);
+						start=start+cname+1;
+						 endc=document.cookie.indexOf(";",start);
 					}
-					if(end==-1){
-						end = document.cookie.length;
+					if(endc==-1){
+						endc = document.cookie.length;
 					}
-					return document.cookie.substring(start, end);
+					return document.cookie.substring(start, endc);
 				}
 				return "";
 			}
