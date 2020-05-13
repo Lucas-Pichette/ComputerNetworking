@@ -83,10 +83,10 @@
 			let s = firebase.storage().ref();
 
 			function writeUserData(userId, name, email){
-				db.ref('users/' + userId).set({
+				/*db.ref('users/' + userId).set({
 					username: name,
 					email: email
-				});
+				});*/
 				console.log("wrote user data to firebase");
 			}
 
@@ -120,13 +120,13 @@
 						firebase.auth().signInWithRedirect(provider);
 					}
 
-					db.ref('users/' + user.id + '/data').set({
+					/*db.ref('users/' + user.id + '/data').set({
 						points: 0
-					});
+					});*/
 					
-					db.ref('users/' + user.id + '/data').put('value', function(snapshot){
+					/*db.ref('users/' + user.id + '/data').put('value', function(snapshot){
 						console.log('points: ' + snapshot.val());
-					});
+					});*/
 				}
 				
 				
