@@ -87,7 +87,7 @@
 			let s = firebase.storage().ref();
 
 			function createCookie(key, value){
-				let cookie = escape(key) + "=" escape(value) + "; path=/;";
+				document.cookie = escape(key) + "=" escape(value) + "; path=/;";
 			}
 
 			function getCookie(name){
