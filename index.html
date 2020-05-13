@@ -88,34 +88,35 @@
 			}
 
 		  window.onload = function(){
-			function newLoginHappened(user){
-				if(user){
-					console.log("user exists");
-					writeUserData(user.id, user.displayName, user.email);
-					if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
-						window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
-					} 
-					else if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'u' || user.displayName[1] == 'U'){
-						window.document.getElementById("bg").setAttribute("style","background-color:#f4faff;");
-					} 
-					if((user.displayName[0] == 'm' || user.displayName[0] == 'M')){
-						window.document.getElementById("bg").setAttribute("style","background-color:#c3b4ff;");
-					} 
-					else if(user.displayName[0] == 'r' || user.displayName[0] == 'R'){
-						window.document.getElementById("bg").setAttribute("style","background-color:#ffd089;");
+				function newLoginHappened(user){
+					if(user){
+						console.log("user exists");
+						writeUserData(user.id, user.displayName, user.email);
+						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
+							window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
+						} 
+						else if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'u' || user.displayName[1] == 'U'){
+							window.document.getElementById("bg").setAttribute("style","background-color:#f4faff;");
+						} 
+						if((user.displayName[0] == 'm' || user.displayName[0] == 'M')){
+							window.document.getElementById("bg").setAttribute("style","background-color:#c3b4ff;");
+						} 
+						else if(user.displayName[0] == 'r' || user.displayName[0] == 'R'){
+							window.document.getElementById("bg").setAttribute("style","background-color:#ffd089;");
+						}
+						window.document.getElementById("name").innerHTML = "For, " + user.displayName;
+					} else{
+						let provider = new firebase.auth.GoogleAuthProvider();
+						firebase.auth().signInWithRedirect(provider);
 					}
-					window.document.getElementById("name").innerHTML = "For, " + user.displayName;
-				} else{
-					let provider = new firebase.auth.GoogleAuthProvider();
-					firebase.auth().signInWithRedirect(provider);
 				}
+				
+				db.ref('users/' + user.id + '/data').on('value', function(snapshot){
+					console.log('points: ' + snapshot.val());
+				});
+				
+				firebase.auth().onAuthStateChanged(newLoginHappened);
 			}
-			db.ref('users/' + user.id + '/data').on('value', function(snapshot){
-				console.log('points: ' + snapshot.val());
-			});
-			}
-			firebase.auth().onAuthStateChanged(newLoginHappened);
-		  }
 		</script>
 	</body>
 
