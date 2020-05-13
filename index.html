@@ -129,7 +129,7 @@
 							name: authData.name,
 							points:0
 						});*/
-						createCookie("points",(getCookie("points")+1));
+						createCookie("points",(parseInt(getCookie("points"))+1));
 
 
 						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
@@ -148,7 +148,7 @@
 					} else{
 						let provider = new firebase.auth.GoogleAuthProvider();
 						firebase.auth().signInWithRedirect(provider);
-						createCookie("points", "3");
+						createCookie("points", "0");
 					}
 
 					/*db.ref('users/' + user.id + '/data').set({
