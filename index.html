@@ -109,10 +109,10 @@
 						}
 						window.document.getElementById("name").innerHTML = "For, " + user.displayName;
 						const account = {
-							useruid = user.id,
+							useruid: user.id,
 							calendarEvents: [],
-							email = user.email,
-							points = 0
+							email: user.email,
+							points: 0
 						}
 						firebase.firestore().collection('users').doc(user.id).set(account);
 					} else{
