@@ -83,29 +83,22 @@
 		  // Initialize Firebase
 		  firebase.initializeApp(firebaseConfig);
 		  firebase.analytics();
-			let db = firebase.database();
+			let db = firebase.database().ref();
 			let s = firebase.storage().ref();
-			let ref = new Firebase("https://computernetworking-5f028.firebaseio.com");
 
-			ref.onAuth(function(authData){
-				if(authData && isNewUser){
-					ref.child("users").child(authData.uid).set({
-						provider: authData.provider,
-						name: getName(authData)
-					});
-					db.collection("users").doc(authData.uid).set({
-						email: authData.email,
-						id: authData.uid,
-						name: authData.name,
-						points:0
-					});
-				}
-			});
 
 		  window.onload = function(){
 				function newLoginHappened(user){
 					if(user){
 						console.log("user exists");
+						
+						db.collection("users").doc(authData.uid).set({
+							email: authData.email,
+							id: authData.uid,
+							name: authData.name,
+							points:0
+						});
+						
 						if((user.displayName[0] == 'l' || user.displayName[0] == 'L') && user.displayName[1] == 'a' || user.displayName[1] == 'A'){
 							window.document.getElementById("bg").setAttribute("style","background-color:#ebd6ff;");
 						} 
