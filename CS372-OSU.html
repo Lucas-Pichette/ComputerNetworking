@@ -31,7 +31,7 @@
 	<header id="header" class="header">
 		<h1 id="title" >CS 372</h1>
 		<h2>Intro to Computer Networks</h2>
-		
+
 	</header>
 
 	<!-- Just a padder -->
@@ -59,14 +59,16 @@
 
 
 		<section id="Brief and Basic Introduction">
+
+			<!-- THE CONTENT -- >
 			<div class="para">
 				<h4>Brief and Basic Introduction</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Preliminaries&quot; Lecture, from Oregon State University, Corvallis, OR, April 29, 2020."><sup>[1]</sup></abbr>
 
 				<h5>Network</h5>
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;
-					<em class="highlight">A system for connecting computers using a <b>single transmission technology</b></em>. A transmission technology is, as of now, either: <b>broadcast networks</b>, or <b>point-to-point networks</b>. Broadcast networks have a single communication channel that is shared by all of the machines in the network; Packets sent by any machine are received by all machines. Point-to-point networks consist of many connections between individual pairs of machines, occasionally needing to go through intermediate computers before reaching the desired 
-					computer. 
+					<em class="highlight">A system for connecting computers using a <b>single transmission technology</b></em>. A transmission technology is, as of now, either: <b>broadcast networks</b>, or <b>point-to-point networks</b>. Broadcast networks have a single communication channel that is shared by all of the machines in the network; Packets sent by any machine are received by all machines. Point-to-point networks consist of many connections between individual pairs of machines, occasionally needing to go through intermediate computers before reaching the desired
+					computer.
 				</p>
 				<div class="note">
 					A general rule is as follows:<br>
@@ -93,7 +95,7 @@
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					The <em class="highlight">transmission rate</em> of packets through a transmission technology.
-				</p> 
+				</p>
 
 				<p>We have now reached the end of the Brief and Basic Introduction section. The following is a quizlet regarding the concepts we covered.</p>
 
@@ -101,13 +103,13 @@
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<em class="highlight">Ethernet is a networking standard that made local networking possible.</em> Several other standards exist.
-				</p> 
+				</p>
 
 				<h5>TCP/IP</h5>
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					<em class="highlight">Trasmission Control Protocol / Internet Protocol. Made <b>internetworking</b> possible.</em> Internetworking is the communication between networks; 'the internet'.
-				</p> 
+				</p>
 
 				<h5>Metrics</h5>
 				<p>
@@ -117,19 +119,182 @@
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					Size is measured in bits, where: Ki = 2<sup>10</sup>, Mi = 2<sup>20</sup>, Gi = 2<sup>30</sup>, etc. (e.g. 1GiB = 1,073,741,824 bits)
-				</p> 
+				</p>
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					Use lower-case b for bits, upper-case B for Bytes. Being where: 1Mib = 128KiB; 1Mib = 1024Kib.
-				</p> 
+				</p>
 
 				<!-- Just a padder -->
 				<div style="height:50px;"></div>
 
-				<p><b>We have now reached the end of the Brief and Basic Introduction section.</b> The following is a quizlet regarding the concepts we covered.</p><br>
+				<p><b>We have now reached the end of the Brief and Basic Introduction section.</b> The following is a checkpoint regarding the concepts we covered.</p><br>
 			</div>
-			<iframe src="https://quizlet.com/505187528/match/embed?i=2oaj5m&x=1jj1" class="quizlet"></iframe>
-			
+
+
+			<!-- THE QUIZ -->
+			<div class="question-container">
+				<form id="s1-q1-f">
+					<div class="multiple-choice" id="s1-q1">
+						<h2 class="question-header">A <em>Network</em> is...</h2>
+						<label for="s1-q1-i1">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i1"/>
+							A synonomous term for the internet.
+						</label>
+						<label for="s1-q1-i2">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i2"/>
+							A system for connecting computers using multi-transmission technology.
+						</label>
+						<label for="s1-q1-i3">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i3"/>
+							A synonomous term for supervacaneous-connection
+						</label>
+						<label for="s1-q1-i4">
+							<input type="radio" name="s1-q1-input" value="1" id="s1-q1-i4"/>
+							A system for connecting computers using a single transmission technology.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q2-f" hidden="true">
+					<div class="multiple-choice" id="s1-q2">
+						<h2 class="question-header">The <em>Internet</em> is...</h2>
+						<label for="s1-q2-i1">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i1"/>
+							A subset of a network
+						</label>
+						<label for="s1-q2-i2">
+							<input type="radio" name="s1-q2-input" value="1" id="s1-q2-i2"/>
+							A network of networks
+						</label>
+						<label for="s1-q2-i3">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i3"/>
+							A protocol for packet communication
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q3-f" hidden="true">
+					<div class="multiple-choice" id="s1-q3">
+						<h2 class="question-header">Packet Switches...</h2>
+						<label for="s1-q3-i1">
+							<input type="radio" name="s1-q3-input" value="0" id="s1-q3-i1"/>
+							Provide packet-checking to ensure reliable data transfer.
+						</label>
+						<label for="s1-q3-i2">
+							<input type="radio" name="s1-q3-input" value="1" id="s1-q3-i2"/>
+							Forward packets.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q4-f" hidden="true">
+					<div class="multiple-choice" id="s1-q4">
+						<h2 class="question-header">The difference between <em>Bandwidth</em> and <em>Ethernet</em> is...</h2>
+						<label for="s1-q4-i1">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i1"/>
+							Bandwidth is Processing Rate and Ethernet is a networking standard that made local networking impossible.
+						</label>
+						<label for="s1-q4-i2">
+							<input type="radio" name="s1-q4-input" value="1" id="s1-q4-i2"/>
+							Bandwidth is Transmission Rate and Ethernet is a networking standard that made local networking possible.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth and Ethernet are the same except that ethernet is a form of unguided media and Ethernet is a form of unguided media.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth is the quality of connection your endsystem has with another endsystem in relation to data reliability, whereas Ethernet is a form of guided media.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q5-f" hidden="true">
+					<div class="multiple-choice" id="s1-q5">
+						<h2 class="question-header">What made <em>internetworking</em> possible?</h2>
+						<label for="s1-q5-i1">
+							<input type="radio" name="s1-q5-input" value="1" id="s1-q5-i1"/>
+							TCP/IP
+						</label>
+						<label for="s1-q5-i2">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i2"/>
+							The Internet
+						</label>
+						<label for="s1-q5-i3">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i3"/>
+							Packet Switches
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q6-f" hidden="true">
+					<div class="multiple-choice" id="s1-q6">
+						<h2 class="question-header">2 MiB = ...</h2>
+						<label for="s1-q6-i1">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i1"/>
+							16384 Kib
+						</label>
+						<label for="s1-q6-i2">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i2"/>
+							2048 KiB
+						</label>
+						<label for="s1-q6-i3">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i3"/>
+							16 Mib
+						</label>
+						<label for="s1-q6-i4">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i4"/>
+							16,777,216 bits
+						</label>
+						<label for="s1-q6-i5">
+							<input type="radio" name="s1-q6-input" value="1" id="s1-q5-i5"/>
+							All of the above
+						</label>
+						<label for="s1-q6-i6">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i6"/>
+							A, B, and D
+						</label>
+						<div class="edit-me-q" contentEditable="true" style="width:100%;min-height:100px;height:auto;">
+							You can edit me...
+						</div>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<div id="end-cp-msg" hidden="true">
+					<h1>CheckPoint 1 Completed!</h1>
+					<h2 id="s1-end-cp-msg">Well done!</h2>
+				</div>
+
+				<form id="s1-f-refresh">
+					<em>
+						<small>! If you reset the questions you reset any earned points !</small>
+					</em>
+					<br>
+					<button type="submit" value="Submit">Reset Questions</button>
+				</form>
+
+				<div class="status">
+					<span>So far you've receved a: </span><span id="section1-score">0</span>/<span>6</span>
+					<br><br>
+					<em>
+						<small>Points on nav-bar will show up on page refresh/change.</small>
+					</em>
+				</div>
+			</div>
+
 			<!-- Just a padder -->
 			<div style="height:100px;"></div>
 		</section>
@@ -138,8 +303,11 @@
 
 
 		<section id="Overview of Networking">
-		<hr width="80%">
-		<div style="height:100px;"></div>
+			<hr width="80%">
+			<div style="height:100px;"></div>
+
+
+			<!-- THE CONTENT -- >
 			<div class="para">
 				<h4>Overview of Networking</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Overview of Networking&quot; Lecture, from Oregon State University, Corvallis, OR, April 29, 2020."><sup>[2]</sup></abbr>
 
@@ -155,11 +323,11 @@
 				<p>
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					Networks take on the form of the following structures:<br><br>
-					
+
 					&nbsp;&nbsp;&nbsp;&nbsp; <u>Network Edge</u>: Consists of hosts and applications, also including clients and servers.<br>
-					
+
 					&nbsp;&nbsp;&nbsp;&nbsp; <u>Network Core</u>: Consists of interconnected routers; a network of networks (network cores exist within the internet, they are not synonomous).<br>
-					
+
 					&nbsp;&nbsp;&nbsp;&nbsp; <u>Physical Media</u>: Communication links<br>
 				</p>
 
@@ -180,20 +348,191 @@
 					&nbsp;&nbsp;&nbsp;&nbsp;
 					Minimal or no use of dedicated servers. <em class="highlight">Directly from a user machine to a user machine.</em> Think of Skype or BitTorrent.
 				</p>
+
+				<!-- Just a padder -->
+				<div style="height:50px;"></div>
+
+				<p><b>We have now reached the end of the Brief and Basic Introduction section.</b> The following is a checkpoint regarding the concepts we covered.</p><br>
 			</div>
-			<iframe src="https://quizlet.com/505377483/match/embed?i=2oaj5m&x=1jj1" class="quizlet"></iframe>
+
+
+			<!-- THE QUIZ -->
+			<div class="question-container">
+				<form id="s1-q1-f">
+					<div class="multiple-choice" id="s1-q1">
+						<h2 class="question-header">A <em>Network</em> is...</h2>
+						<label for="s1-q1-i1">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i1"/>
+							A synonomous term for the internet.
+						</label>
+						<label for="s1-q1-i2">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i2"/>
+							A system for connecting computers using multi-transmission technology.
+						</label>
+						<label for="s1-q1-i3">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i3"/>
+							A synonomous term for supervacaneous-connection
+						</label>
+						<label for="s1-q1-i4">
+							<input type="radio" name="s1-q1-input" value="1" id="s1-q1-i4"/>
+							A system for connecting computers using a single transmission technology.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q2-f" hidden="true">
+					<div class="multiple-choice" id="s1-q2">
+						<h2 class="question-header">The <em>Internet</em> is...</h2>
+						<label for="s1-q2-i1">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i1"/>
+							A subset of a network
+						</label>
+						<label for="s1-q2-i2">
+							<input type="radio" name="s1-q2-input" value="1" id="s1-q2-i2"/>
+							A network of networks
+						</label>
+						<label for="s1-q2-i3">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i3"/>
+							A protocol for packet communication
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q3-f" hidden="true">
+					<div class="multiple-choice" id="s1-q3">
+						<h2 class="question-header">Packet Switches...</h2>
+						<label for="s1-q3-i1">
+							<input type="radio" name="s1-q3-input" value="0" id="s1-q3-i1"/>
+							Provide packet-checking to ensure reliable data transfer.
+						</label>
+						<label for="s1-q3-i2">
+							<input type="radio" name="s1-q3-input" value="1" id="s1-q3-i2"/>
+							Forward packets.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q4-f" hidden="true">
+					<div class="multiple-choice" id="s1-q4">
+						<h2 class="question-header">The difference between <em>Bandwidth</em> and <em>Ethernet</em> is...</h2>
+						<label for="s1-q4-i1">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i1"/>
+							Bandwidth is Processing Rate and Ethernet is a networking standard that made local networking impossible.
+						</label>
+						<label for="s1-q4-i2">
+							<input type="radio" name="s1-q4-input" value="1" id="s1-q4-i2"/>
+							Bandwidth is Transmission Rate and Ethernet is a networking standard that made local networking possible.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth and Ethernet are the same except that ethernet is a form of unguided media and Ethernet is a form of unguided media.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth is the quality of connection your endsystem has with another endsystem in relation to data reliability, whereas Ethernet is a form of guided media.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q5-f" hidden="true">
+					<div class="multiple-choice" id="s1-q5">
+						<h2 class="question-header">What made <em>internetworking</em> possible?</h2>
+						<label for="s1-q5-i1">
+							<input type="radio" name="s1-q5-input" value="1" id="s1-q5-i1"/>
+							TCP/IP
+						</label>
+						<label for="s1-q5-i2">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i2"/>
+							The Internet
+						</label>
+						<label for="s1-q5-i3">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i3"/>
+							Packet Switches
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q6-f" hidden="true">
+					<div class="multiple-choice" id="s1-q6">
+						<h2 class="question-header">2 MiB = ...</h2>
+						<label for="s1-q6-i1">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i1"/>
+							16384 Kib
+						</label>
+						<label for="s1-q6-i2">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i2"/>
+							2048 KiB
+						</label>
+						<label for="s1-q6-i3">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i3"/>
+							16 Mib
+						</label>
+						<label for="s1-q6-i4">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i4"/>
+							16,777,216 bits
+						</label>
+						<label for="s1-q6-i5">
+							<input type="radio" name="s1-q6-input" value="1" id="s1-q5-i5"/>
+							All of the above
+						</label>
+						<label for="s1-q6-i6">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i6"/>
+							A, B, and D
+						</label>
+						<div class="edit-me-q" contentEditable="true" style="width:100%;min-height:100px;height:auto;">
+							You can edit me...
+						</div>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<div id="end-cp-msg" hidden="true">
+					<h1>CheckPoint 1 Completed!</h1>
+					<h2 id="s1-end-cp-msg">Well done!</h2>
+				</div>
+
+				<form id="s1-f-refresh">
+					<em>
+						<small>! If you reset the questions you reset any earned points !</small>
+					</em>
+					<br>
+					<button type="submit" value="Submit">Reset Questions</button>
+				</form>
+
+				<div class="status">
+					<span>So far you've receved a: </span><span id="section1-score">0</span>/<span>6</span>
+					<br><br>
+					<em>
+						<small>Points on nav-bar will show up on page refresh/change.</small>
+					</em>
+				</div>
+			</div>
+
+
 			<!-- Just a padder -->
 			<div style="height:100px;"></div>
 		</section>
 
 
 
-		
-		
-		
+
 		<section id="Circuit Switching and Packet Switching">
 			<hr width="80%">
 			<div style="height:100px;"></div>
+
+
+			<!-- THE CONTENT -- >
 			<div class="para">
 				<h4>Circuit Switching and Packet Switching</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Circuit Switching and Packet Switching&quot; Lecture, from Oregon State University, Corvallis, OR, April 29, 2020."><sup>[3]</sup></abbr>
 
@@ -217,17 +556,186 @@
 
 				</p>
 			</div>
-			
+
 			<div class="para">
 				<p class="figure-sidebyside-title">&lt;- &nbsp;Circuit Switching &nbsp;&amp;&nbsp; Packet Switching&nbsp; -&gt;</p>
 			</div>
 			<img class="figure-sidebyside" src="./images/Circuit_Switching_FDM.gif" alt="gif of circuit switching"/>
 			<img class="figure-sidebyside" src="./images/Packet-switching.gif" alt="gif of packet switching"/>
+			<!-- Just a padder -->
+			<div style="height:100px;"></div>
 
 			<div class="para">
-				<p>Here's a spreadsheet that includes how to do this, as well as how to do some other mathematical calculations for networking</p>
-				<iframe src="https://onedrive.live.com/embed?resid=21784F771Ce8121F%214488&authkey=%21AJpD9VpsK2ncLZ0&em=2&wdAllowInteractivity=True&wdHideGridlines=True&wdDownloadButton=True&wdInConfigurator=True" class="quizlet"></iframe>
+				<!-- Just a padder -->
+				<div style="height:50px;"></div>
+				<p><b>We have now reached the end of the Brief and Basic Introduction section.</b> The following is a checkpoint regarding the concepts we covered.</p><br>
 			</div>
+
+
+			<!-- THE QUIZ -->
+			<div class="question-container">
+				<form id="s1-q1-f">
+					<div class="multiple-choice" id="s1-q1">
+						<h2 class="question-header">A <em>Network</em> is...</h2>
+						<label for="s1-q1-i1">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i1"/>
+							A synonomous term for the internet.
+						</label>
+						<label for="s1-q1-i2">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i2"/>
+							A system for connecting computers using multi-transmission technology.
+						</label>
+						<label for="s1-q1-i3">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i3"/>
+							A synonomous term for supervacaneous-connection
+						</label>
+						<label for="s1-q1-i4">
+							<input type="radio" name="s1-q1-input" value="1" id="s1-q1-i4"/>
+							A system for connecting computers using a single transmission technology.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q2-f" hidden="true">
+					<div class="multiple-choice" id="s1-q2">
+						<h2 class="question-header">The <em>Internet</em> is...</h2>
+						<label for="s1-q2-i1">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i1"/>
+							A subset of a network
+						</label>
+						<label for="s1-q2-i2">
+							<input type="radio" name="s1-q2-input" value="1" id="s1-q2-i2"/>
+							A network of networks
+						</label>
+						<label for="s1-q2-i3">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i3"/>
+							A protocol for packet communication
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q3-f" hidden="true">
+					<div class="multiple-choice" id="s1-q3">
+						<h2 class="question-header">Packet Switches...</h2>
+						<label for="s1-q3-i1">
+							<input type="radio" name="s1-q3-input" value="0" id="s1-q3-i1"/>
+							Provide packet-checking to ensure reliable data transfer.
+						</label>
+						<label for="s1-q3-i2">
+							<input type="radio" name="s1-q3-input" value="1" id="s1-q3-i2"/>
+							Forward packets.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q4-f" hidden="true">
+					<div class="multiple-choice" id="s1-q4">
+						<h2 class="question-header">The difference between <em>Bandwidth</em> and <em>Ethernet</em> is...</h2>
+						<label for="s1-q4-i1">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i1"/>
+							Bandwidth is Processing Rate and Ethernet is a networking standard that made local networking impossible.
+						</label>
+						<label for="s1-q4-i2">
+							<input type="radio" name="s1-q4-input" value="1" id="s1-q4-i2"/>
+							Bandwidth is Transmission Rate and Ethernet is a networking standard that made local networking possible.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth and Ethernet are the same except that ethernet is a form of unguided media and Ethernet is a form of unguided media.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth is the quality of connection your endsystem has with another endsystem in relation to data reliability, whereas Ethernet is a form of guided media.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q5-f" hidden="true">
+					<div class="multiple-choice" id="s1-q5">
+						<h2 class="question-header">What made <em>internetworking</em> possible?</h2>
+						<label for="s1-q5-i1">
+							<input type="radio" name="s1-q5-input" value="1" id="s1-q5-i1"/>
+							TCP/IP
+						</label>
+						<label for="s1-q5-i2">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i2"/>
+							The Internet
+						</label>
+						<label for="s1-q5-i3">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i3"/>
+							Packet Switches
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q6-f" hidden="true">
+					<div class="multiple-choice" id="s1-q6">
+						<h2 class="question-header">2 MiB = ...</h2>
+						<label for="s1-q6-i1">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i1"/>
+							16384 Kib
+						</label>
+						<label for="s1-q6-i2">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i2"/>
+							2048 KiB
+						</label>
+						<label for="s1-q6-i3">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i3"/>
+							16 Mib
+						</label>
+						<label for="s1-q6-i4">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i4"/>
+							16,777,216 bits
+						</label>
+						<label for="s1-q6-i5">
+							<input type="radio" name="s1-q6-input" value="1" id="s1-q5-i5"/>
+							All of the above
+						</label>
+						<label for="s1-q6-i6">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i6"/>
+							A, B, and D
+						</label>
+						<div class="edit-me-q" contentEditable="true" style="width:100%;min-height:100px;height:auto;">
+							You can edit me...
+						</div>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<div id="end-cp-msg" hidden="true">
+					<h1>CheckPoint 1 Completed!</h1>
+					<h2 id="s1-end-cp-msg">Well done!</h2>
+				</div>
+
+				<form id="s1-f-refresh">
+					<em>
+						<small>! If you reset the questions you reset any earned points !</small>
+					</em>
+					<br>
+					<button type="submit" value="Submit">Reset Questions</button>
+				</form>
+
+				<div class="status">
+					<span>So far you've receved a: </span><span id="section1-score">0</span>/<span>6</span>
+					<br><br>
+					<em>
+						<small>Points on nav-bar will show up on page refresh/change.</small>
+					</em>
+				</div>
+			</div>
+
+
 			<!-- Just a padder -->
 			<div style="height:100px;"></div>
 		</section>
@@ -235,11 +743,12 @@
 
 
 
-
-
 		<section id="Packet Switched vs. Circuit Switched Networks">
 			<hr width="80%">
 			<div style="height:100px;"></div>
+
+
+			<!-- THE CONTENT -- >
 			<div class="para">
 				<h4>Packet Switched vs. Circuit Switched Networks</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Packet Switched vs Circuit Switched Networks&quot; Lecture, from Oregon State University, Corvallis, OR, May 1, 2020."><sup>[4]</sup></abbr><abbr class="cite" title="&quot;26. Multiplexing (Cont'd) - Introduction To Data Communications&quot;. 2020. Telecomworld101.Com. Accessed May 1 2020. http://www.telecomworld101.com/Intro2dcRev2/page99.html."><sup>[5]</sup></abbr>
 
@@ -275,6 +784,172 @@
 				</p>
 			</div>
 			<img class="figure-wide" src="./images/FDM.png" alt="Image of FDM"/>
+
+
+			<!-- THE QUIZ -->
+			<div class="question-container">
+				<form id="s1-q1-f">
+					<div class="multiple-choice" id="s1-q1">
+						<h2 class="question-header">A <em>Network</em> is...</h2>
+						<label for="s1-q1-i1">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i1"/>
+							A synonomous term for the internet.
+						</label>
+						<label for="s1-q1-i2">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i2"/>
+							A system for connecting computers using multi-transmission technology.
+						</label>
+						<label for="s1-q1-i3">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i3"/>
+							A synonomous term for supervacaneous-connection
+						</label>
+						<label for="s1-q1-i4">
+							<input type="radio" name="s1-q1-input" value="1" id="s1-q1-i4"/>
+							A system for connecting computers using a single transmission technology.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q2-f" hidden="true">
+					<div class="multiple-choice" id="s1-q2">
+						<h2 class="question-header">The <em>Internet</em> is...</h2>
+						<label for="s1-q2-i1">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i1"/>
+							A subset of a network
+						</label>
+						<label for="s1-q2-i2">
+							<input type="radio" name="s1-q2-input" value="1" id="s1-q2-i2"/>
+							A network of networks
+						</label>
+						<label for="s1-q2-i3">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i3"/>
+							A protocol for packet communication
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q3-f" hidden="true">
+					<div class="multiple-choice" id="s1-q3">
+						<h2 class="question-header">Packet Switches...</h2>
+						<label for="s1-q3-i1">
+							<input type="radio" name="s1-q3-input" value="0" id="s1-q3-i1"/>
+							Provide packet-checking to ensure reliable data transfer.
+						</label>
+						<label for="s1-q3-i2">
+							<input type="radio" name="s1-q3-input" value="1" id="s1-q3-i2"/>
+							Forward packets.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q4-f" hidden="true">
+					<div class="multiple-choice" id="s1-q4">
+						<h2 class="question-header">The difference between <em>Bandwidth</em> and <em>Ethernet</em> is...</h2>
+						<label for="s1-q4-i1">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i1"/>
+							Bandwidth is Processing Rate and Ethernet is a networking standard that made local networking impossible.
+						</label>
+						<label for="s1-q4-i2">
+							<input type="radio" name="s1-q4-input" value="1" id="s1-q4-i2"/>
+							Bandwidth is Transmission Rate and Ethernet is a networking standard that made local networking possible.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth and Ethernet are the same except that ethernet is a form of unguided media and Ethernet is a form of unguided media.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth is the quality of connection your endsystem has with another endsystem in relation to data reliability, whereas Ethernet is a form of guided media.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q5-f" hidden="true">
+					<div class="multiple-choice" id="s1-q5">
+						<h2 class="question-header">What made <em>internetworking</em> possible?</h2>
+						<label for="s1-q5-i1">
+							<input type="radio" name="s1-q5-input" value="1" id="s1-q5-i1"/>
+							TCP/IP
+						</label>
+						<label for="s1-q5-i2">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i2"/>
+							The Internet
+						</label>
+						<label for="s1-q5-i3">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i3"/>
+							Packet Switches
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q6-f" hidden="true">
+					<div class="multiple-choice" id="s1-q6">
+						<h2 class="question-header">2 MiB = ...</h2>
+						<label for="s1-q6-i1">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i1"/>
+							16384 Kib
+						</label>
+						<label for="s1-q6-i2">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i2"/>
+							2048 KiB
+						</label>
+						<label for="s1-q6-i3">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i3"/>
+							16 Mib
+						</label>
+						<label for="s1-q6-i4">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i4"/>
+							16,777,216 bits
+						</label>
+						<label for="s1-q6-i5">
+							<input type="radio" name="s1-q6-input" value="1" id="s1-q5-i5"/>
+							All of the above
+						</label>
+						<label for="s1-q6-i6">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i6"/>
+							A, B, and D
+						</label>
+						<div class="edit-me-q" contentEditable="true" style="width:100%;min-height:100px;height:auto;">
+							You can edit me...
+						</div>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<div id="end-cp-msg" hidden="true">
+					<h1>CheckPoint 1 Completed!</h1>
+					<h2 id="s1-end-cp-msg">Well done!</h2>
+				</div>
+
+				<form id="s1-f-refresh">
+					<em>
+						<small>! If you reset the questions you reset any earned points !</small>
+					</em>
+					<br>
+					<button type="submit" value="Submit">Reset Questions</button>
+				</form>
+
+				<div class="status">
+					<span>So far you've receved a: </span><span id="section1-score">0</span>/<span>6</span>
+					<br><br>
+					<em>
+						<small>Points on nav-bar will show up on page refresh/change.</small>
+					</em>
+				</div>
+			</div>
+
+
 			<!-- Just a padder -->
 			<div style="height:100px;"></div>
 		</section>
@@ -282,11 +957,12 @@
 
 
 
-
-
 		<section id="Network Structure and Performance">
 			<hr width="80%">
 			<div style="height:100px;"></div>
+
+
+			<!-- THE CONTENT -- >
 			<div class="para">
 				<h4>Network Structure and Performance</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Network Structure and Performance&quot; Lecture, from Oregon State University, Corvallis, OR, May 1, 2020."><sup>[6]</sup></abbr>
 
@@ -332,30 +1008,363 @@
 					4. Congestion Control<br>
 					<br><br>
 					UDP: Connection-less fast data-transfer protocol, no session established. Known as the 'fire and forget' protocol. UDP pretty much offers no features other than being fast.
-				</div>
-			
-				<!-- Just a padder -->
-				<div style="height:100px;"></div>
-			</section>
+				</p>
+			</div>
 
-			<section id="Access Networks and Physical Media">
-				<!-- Two hrs because of new chapter/week -->
-				<hr width="80%">
-				<hr width="80%">
-				<div style="height:100px;"></div>
-				<div class="para">
-					<h4>Access Networks and Physical Media</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Access Networks and Physical Media&quot; Lecture, from Oregon State University, Corvallis, OR, May 1, 2020."><sup>[7]</sup></abbr>
 
-					<h5>Access Networks</h5>
-					<p>
-						&nbsp;&nbsp;&nbsp;&nbsp;
-					</p>
+			<!-- THE QUIZ -->
+			<div class="question-container">
+				<form id="s1-q1-f">
+					<div class="multiple-choice" id="s1-q1">
+						<h2 class="question-header">A <em>Network</em> is...</h2>
+						<label for="s1-q1-i1">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i1"/>
+							A synonomous term for the internet.
+						</label>
+						<label for="s1-q1-i2">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i2"/>
+							A system for connecting computers using multi-transmission technology.
+						</label>
+						<label for="s1-q1-i3">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i3"/>
+							A synonomous term for supervacaneous-connection
+						</label>
+						<label for="s1-q1-i4">
+							<input type="radio" name="s1-q1-input" value="1" id="s1-q1-i4"/>
+							A system for connecting computers using a single transmission technology.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q2-f" hidden="true">
+					<div class="multiple-choice" id="s1-q2">
+						<h2 class="question-header">The <em>Internet</em> is...</h2>
+						<label for="s1-q2-i1">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i1"/>
+							A subset of a network
+						</label>
+						<label for="s1-q2-i2">
+							<input type="radio" name="s1-q2-input" value="1" id="s1-q2-i2"/>
+							A network of networks
+						</label>
+						<label for="s1-q2-i3">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i3"/>
+							A protocol for packet communication
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q3-f" hidden="true">
+					<div class="multiple-choice" id="s1-q3">
+						<h2 class="question-header">Packet Switches...</h2>
+						<label for="s1-q3-i1">
+							<input type="radio" name="s1-q3-input" value="0" id="s1-q3-i1"/>
+							Provide packet-checking to ensure reliable data transfer.
+						</label>
+						<label for="s1-q3-i2">
+							<input type="radio" name="s1-q3-input" value="1" id="s1-q3-i2"/>
+							Forward packets.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q4-f" hidden="true">
+					<div class="multiple-choice" id="s1-q4">
+						<h2 class="question-header">The difference between <em>Bandwidth</em> and <em>Ethernet</em> is...</h2>
+						<label for="s1-q4-i1">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i1"/>
+							Bandwidth is Processing Rate and Ethernet is a networking standard that made local networking impossible.
+						</label>
+						<label for="s1-q4-i2">
+							<input type="radio" name="s1-q4-input" value="1" id="s1-q4-i2"/>
+							Bandwidth is Transmission Rate and Ethernet is a networking standard that made local networking possible.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth and Ethernet are the same except that ethernet is a form of unguided media and Ethernet is a form of unguided media.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth is the quality of connection your endsystem has with another endsystem in relation to data reliability, whereas Ethernet is a form of guided media.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q5-f" hidden="true">
+					<div class="multiple-choice" id="s1-q5">
+						<h2 class="question-header">What made <em>internetworking</em> possible?</h2>
+						<label for="s1-q5-i1">
+							<input type="radio" name="s1-q5-input" value="1" id="s1-q5-i1"/>
+							TCP/IP
+						</label>
+						<label for="s1-q5-i2">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i2"/>
+							The Internet
+						</label>
+						<label for="s1-q5-i3">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i3"/>
+							Packet Switches
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q6-f" hidden="true">
+					<div class="multiple-choice" id="s1-q6">
+						<h2 class="question-header">2 MiB = ...</h2>
+						<label for="s1-q6-i1">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i1"/>
+							16384 Kib
+						</label>
+						<label for="s1-q6-i2">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i2"/>
+							2048 KiB
+						</label>
+						<label for="s1-q6-i3">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i3"/>
+							16 Mib
+						</label>
+						<label for="s1-q6-i4">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i4"/>
+							16,777,216 bits
+						</label>
+						<label for="s1-q6-i5">
+							<input type="radio" name="s1-q6-input" value="1" id="s1-q5-i5"/>
+							All of the above
+						</label>
+						<label for="s1-q6-i6">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i6"/>
+							A, B, and D
+						</label>
+						<div class="edit-me-q" contentEditable="true" style="width:100%;min-height:100px;height:auto;">
+							You can edit me...
+						</div>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<div id="end-cp-msg" hidden="true">
+					<h1>CheckPoint 1 Completed!</h1>
+					<h2 id="s1-end-cp-msg">Well done!</h2>
 				</div>
-			</section>
+
+				<form id="s1-f-refresh">
+					<em>
+						<small>! If you reset the questions you reset any earned points !</small>
+					</em>
+					<br>
+					<button type="submit" value="Submit">Reset Questions</button>
+				</form>
+
+				<div class="status">
+					<span>So far you've receved a: </span><span id="section1-score">0</span>/<span>6</span>
+					<br><br>
+					<em>
+						<small>Points on nav-bar will show up on page refresh/change.</small>
+					</em>
+				</div>
+			</div>
 
 
 			<!-- Just a padder -->
-		<div style="height:50px;"></div>
+			<div style="height:100px;"></div>
+		</section>
+
+		<section id="Access Networks and Physical Media">
+			<!-- Two hrs because of new chapter/week -->
+			<hr width="80%">
+			<hr width="80%">
+			<div style="height:100px;"></div>
+
+
+			<!-- THE CONTENT -- >
+			<div class="para">
+				<h4>Access Networks and Physical Media</h4><abbr class="cite" title="Lewis, Bram. &quot;Exploration: Access Networks and Physical Media&quot; Lecture, from Oregon State University, Corvallis, OR, May 1, 2020."><sup>[7]</sup></abbr>
+
+				<h5>Access Networks</h5>
+				<p>
+					&nbsp;&nbsp;&nbsp;&nbsp;
+				</p>
+			</div>
+
+
+			<!-- THE QUIZ -->
+			<div class="question-container">
+				<form id="s1-q1-f">
+					<div class="multiple-choice" id="s1-q1">
+						<h2 class="question-header">A <em>Network</em> is...</h2>
+						<label for="s1-q1-i1">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i1"/>
+							A synonomous term for the internet.
+						</label>
+						<label for="s1-q1-i2">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i2"/>
+							A system for connecting computers using multi-transmission technology.
+						</label>
+						<label for="s1-q1-i3">
+							<input type="radio" name="s1-q1-input" value="0" id="s1-q1-i3"/>
+							A synonomous term for supervacaneous-connection
+						</label>
+						<label for="s1-q1-i4">
+							<input type="radio" name="s1-q1-input" value="1" id="s1-q1-i4"/>
+							A system for connecting computers using a single transmission technology.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q2-f" hidden="true">
+					<div class="multiple-choice" id="s1-q2">
+						<h2 class="question-header">The <em>Internet</em> is...</h2>
+						<label for="s1-q2-i1">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i1"/>
+							A subset of a network
+						</label>
+						<label for="s1-q2-i2">
+							<input type="radio" name="s1-q2-input" value="1" id="s1-q2-i2"/>
+							A network of networks
+						</label>
+						<label for="s1-q2-i3">
+							<input type="radio" name="s1-q2-input" value="0" id="s1-q2-i3"/>
+							A protocol for packet communication
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q3-f" hidden="true">
+					<div class="multiple-choice" id="s1-q3">
+						<h2 class="question-header">Packet Switches...</h2>
+						<label for="s1-q3-i1">
+							<input type="radio" name="s1-q3-input" value="0" id="s1-q3-i1"/>
+							Provide packet-checking to ensure reliable data transfer.
+						</label>
+						<label for="s1-q3-i2">
+							<input type="radio" name="s1-q3-input" value="1" id="s1-q3-i2"/>
+							Forward packets.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q4-f" hidden="true">
+					<div class="multiple-choice" id="s1-q4">
+						<h2 class="question-header">The difference between <em>Bandwidth</em> and <em>Ethernet</em> is...</h2>
+						<label for="s1-q4-i1">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i1"/>
+							Bandwidth is Processing Rate and Ethernet is a networking standard that made local networking impossible.
+						</label>
+						<label for="s1-q4-i2">
+							<input type="radio" name="s1-q4-input" value="1" id="s1-q4-i2"/>
+							Bandwidth is Transmission Rate and Ethernet is a networking standard that made local networking possible.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth and Ethernet are the same except that ethernet is a form of unguided media and Ethernet is a form of unguided media.
+						</label>
+						<label for="s1-q4-i3">
+							<input type="radio" name="s1-q4-input" value="0" id="s1-q4-i3"/>
+							Bandwidth is the quality of connection your endsystem has with another endsystem in relation to data reliability, whereas Ethernet is a form of guided media.
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q5-f" hidden="true">
+					<div class="multiple-choice" id="s1-q5">
+						<h2 class="question-header">What made <em>internetworking</em> possible?</h2>
+						<label for="s1-q5-i1">
+							<input type="radio" name="s1-q5-input" value="1" id="s1-q5-i1"/>
+							TCP/IP
+						</label>
+						<label for="s1-q5-i2">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i2"/>
+							The Internet
+						</label>
+						<label for="s1-q5-i3">
+							<input type="radio" name="s1-q5-input" value="0" id="s1-q5-i3"/>
+							Packet Switches
+						</label>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<form id="s1-q6-f" hidden="true">
+					<div class="multiple-choice" id="s1-q6">
+						<h2 class="question-header">2 MiB = ...</h2>
+						<label for="s1-q6-i1">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i1"/>
+							16384 Kib
+						</label>
+						<label for="s1-q6-i2">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q6-i2"/>
+							2048 KiB
+						</label>
+						<label for="s1-q6-i3">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i3"/>
+							16 Mib
+						</label>
+						<label for="s1-q6-i4">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i4"/>
+							16,777,216 bits
+						</label>
+						<label for="s1-q6-i5">
+							<input type="radio" name="s1-q6-input" value="1" id="s1-q5-i5"/>
+							All of the above
+						</label>
+						<label for="s1-q6-i6">
+							<input type="radio" name="s1-q6-input" value="0" id="s1-q5-i6"/>
+							A, B, and D
+						</label>
+						<div class="edit-me-q" contentEditable="true" style="width:100%;min-height:100px;height:auto;">
+							You can edit me...
+						</div>
+					</div>
+
+					<button type="submit" value="Submit">Submit</button>
+				</form>
+
+				<div id="end-cp-msg" hidden="true">
+					<h1>CheckPoint 1 Completed!</h1>
+					<h2 id="s1-end-cp-msg">Well done!</h2>
+				</div>
+
+				<form id="s1-f-refresh">
+					<em>
+						<small>! If you reset the questions you reset any earned points !</small>
+					</em>
+					<br>
+					<button type="submit" value="Submit">Reset Questions</button>
+				</form>
+
+				<div class="status">
+					<span>So far you've receved a: </span><span id="section1-score">0</span>/<span>6</span>
+					<br><br>
+					<em>
+						<small>Points on nav-bar will show up on page refresh/change.</small>
+					</em>
+				</div>
+			</div>
+
+
+			<!-- Just a padder -->
+			<div style="height:100px;"></div>
+		</section>
 
 		<footer>
 			<span>Created by: <a class="contact-info" href="about-me.html">Lucas Pichette</a></span>
@@ -364,19 +1373,26 @@
 		</footer>
 
 		<!-- The core Firebase JS SDK is always required and must be listed first -->
-		<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js"></script>
+		<section>
+  		<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-app.js">
+      </script>
 
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-storage.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.14.3/firebase-analytics.js"></script>
-		<!--
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-firestore.js"></script>
-		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-functions.js"></script>
-		-->
-
-		<script src="./scripts/script.js"></script>
-		<script src="./scripts/CS372.js"></script>
+  		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-auth.js">
+      </script>
+  		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-storage.js">
+      </script>
+  		<script src="https://www.gstatic.com/firebasejs/7.13.2/firebase-database.js">
+      </script>
+  		<script src="https://www.gstatic.com/firebasejs/7.14.2/firebase-analytics.js">
+      </script>
+  		<!--
+  		<script src="https://www.gstatic.com/firebasejs/7.13./firebase-firestore.js">
+      </script>
+  		<script src="https://www.gstatic.com/firebasejs/7.13./firebase-functions.js">
+      </script>
+  		-->
+  		<script src="./scripts/script.js"></script>
+    </section>
 	</body>
-	
+
 </html>

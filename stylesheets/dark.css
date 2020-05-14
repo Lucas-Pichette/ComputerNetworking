@@ -65,6 +65,48 @@ a.to-top > div > h1{
 	color:white;
 }
 
+
+
+.question-container{
+	margin-left:20vw;
+	width:60vw;
+	background:#6d6d6d;
+	border: 1px solid white;
+	border-radius:5px;
+	padding:20px;
+}
+
+form > button{
+	margin-top:10px;
+	margin-bottom:10px;
+}
+
+form > * > label{
+	display:block;
+	margin-bottom:5px;
+}
+
+.question-header{
+	font-size:130%
+}
+
+form > * > *{
+	/*Put stylization for questions and header in here*/
+}
+
+.status > *  {
+	/*Put stylization for score result and info in here*/
+}
+
+.edit-me.q{
+	background-color:white;
+	border: 2px solid #222;
+	border-radius:3px;
+	padding:5px;	
+}
+
+
+
 ul.section-index{
 	list-style-type: none;
 	padding-left:10vw;
@@ -168,12 +210,12 @@ div.para > p.figure-title{
 }
 
 .contact-info{
-	text-decoration:none; 
+	text-decoration:none;
 	color:lightgrey;
 }
 
 .contact-info:hover{
-	text-decoration:none; 
+	text-decoration:none;
 	color:#fedc1b;
 }
 
@@ -241,13 +283,13 @@ abbr.container{
 		height:55px;
 		background-color:rgba(107, 255, 252, 0.11);
 	}
-	
+
 	.img, .img-p{
 		width:60px;
 		height:36px;
 		padding-top:6px;
 	}
-	
+
 	ul.nav_bar > li {
 		float: left;
 	}
@@ -622,4 +664,3 @@ abbr.container{
 		display:inline-block;
 	}
 }
-
