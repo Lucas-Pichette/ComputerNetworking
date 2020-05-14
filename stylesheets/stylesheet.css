@@ -164,19 +164,19 @@ abbr.container{
 
 
 #set-purple{
-	border: 4px solid purple;
+	border: 4px solid #222;
+	color:#222;
 }
 
 #set-white{
-	border: 4px solid black;
+	border: 4px solid #222;
 	background-color:white;
 	color:#222;
 }
 
 #set-black{
-	border: 4px solid white;
-	background-color:#444;
-	color:white;
+	border: 4px solid #222;
+	color:#222;
 }
 
 .color-select{
