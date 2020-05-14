@@ -26,6 +26,7 @@ window.onload = function(){
 				createCookie("points", "0");
 			}
 		}
+		document.getElementById("name").innerHTML = "For, " + user.displayName;
 	}
 	firebase.auth().onAuthStateChanged(newLoginHappened);
 }
