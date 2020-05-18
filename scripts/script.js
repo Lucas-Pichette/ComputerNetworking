@@ -161,6 +161,26 @@ if(getCookie("s1-q1") == "1"){
 	}
 }
 
+if(getCookie("s2-q1") == "1"){
+	document.getElementById("s2-q1-f").hidden = true;
+	if(getCookie("s2-q2") != "1"){
+		document.getElementById("s2-q2-f").hidden = false;
+	} else if(getCookie("s2-q3") != "1"){
+		document.getElementById("s2-q3-f").hidden = false;
+	} else if(getCookie("s2-q4") != "1"){
+		document.getElementById("s2-q4-f").hidden = false;
+	} else if(getCookie("s2-q5") != "1"){
+		document.getElementById("s2-q5-f").hidden = false;
+	} else if(getCookie("s2-q6") != "1"){
+		document.getElementById("s2-q6-f").hidden = false;
+	} else{
+		document.getElementById("end-cp-msg").hidden = false;
+	}
+}
+
+
+
+
 
 // Change display message at end of section 1
 if(parseInt(getCookie("s1-points")) == 6){
@@ -172,6 +192,28 @@ if(parseInt(getCookie("s1-points")) == 6){
 } else if(parseInt(getCookie("s1-points")) <= 3){
 	document.getElementById("s1-end-cp-msg").innerHTML = "";
 }
+
+if(parseInt(getCookie("s2-points")) == 3){
+	document.getElementById("s2-end-cp-msg").innerHTML = "Perfect!";
+} else if(parseInt(getCookie("s2-points")) == 2){
+	document.getElementById("s2-end-cp-msg").innerHTML = "Awesome Job!";
+} else if(parseInt(getCookie("s2-points")) == 1){
+	document.getElementById("s2-end-cp-msg").innerHTML = "Good Job!";
+} else if(parseInt(getCookie("s2-points")) <= 0){
+	document.getElementById("s2-end-cp-msg").innerHTML = "";
+}
+
+if(parseInt(getCookie("s3-points")) == 5){
+	document.getElementById("s3-end-cp-msg").innerHTML = "Perfect!";
+} else if(parseInt(getCookie("s3-points")) == 4){
+	document.getElementById("s3-end-cp-msg").innerHTML = "Awesome Job!";
+} else if(parseInt(getCookie("s3-points")) == 3){
+	document.getElementById("s3-end-cp-msg").innerHTML = "Good Job!";
+} else if(parseInt(getCookie("s3-points")) <= 2){
+	document.getElementById("s3-end-cp-msg").innerHTML = "";
+}
+
+
 
 
 
@@ -263,8 +305,6 @@ document.getElementById("s1-q5-f").onsubmit=function(){
 	return false;
 }
 
-document.getElementById("section1-score").innerHTML = getCookie("s1-points")
-
 document.getElementById("s1-q6-f").onsubmit=function(){
 	let points = parseInt(document.querySelector('input[name = "s1-q6-input"]:checked').value);
 	let current_score = parseInt(document.getElementById("section1-score").innerHTML);
@@ -281,6 +321,12 @@ document.getElementById("s1-q6-f").onsubmit=function(){
 
 	return false;
 }
+
+document.getElementById("section1-score").innerHTML = getCookie("s1-points")
+
+
+
+
 
 // Refresh button logic
 document.getElementById("s1-f-refresh").onsubmit=function(){
