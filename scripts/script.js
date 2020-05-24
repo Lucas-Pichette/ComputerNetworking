@@ -127,12 +127,14 @@ function httpGet()
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function(){
+    	console.log("HELLO?;");
     	if(this.readstate == 4 && this.status == 200){
-    		alert(this.responseText);
+    		console.log("HELLO?;");
+    		alert(xmlHttp.responseText);
+    		console.log(xmlHttp.responseText);
     	}
     }
-	xmlHttp.open( "GET", "how-bro.html", true ); // false for synchronous request
-	xmlHttp.responseType = "document";
+	xmlHttp.open( "GET", "how-bro.txt", true ); // false for synchronous request
 	xmlHttp.send();
 }
 
