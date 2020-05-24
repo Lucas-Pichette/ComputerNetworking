@@ -123,18 +123,17 @@ document.getElementById("replaceMyInner").innerHTML = getCookie("points");
 
 
 
-function httpGet(theUrl)
+function httpPost(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
-    xmlHttp.open( "GET", theUrl, true ); // false for synchronous request
+    xmlHttp.open( "POST", theUrl, true ); // false for synchronous request
     xmlHttp.send( null );
-    alert(xmlHttp.responseText);
     return xmlHttp.responseText;
 }
 
 if(getCookie("points") < 0){
 	console.log("Yo");
-	httpGet("how-bro.html");
+	httpPost("how-bro.html");
 }
 
 
