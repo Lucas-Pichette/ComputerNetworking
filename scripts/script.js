@@ -127,7 +127,6 @@ function httpPost(theUrl)
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "POST", theUrl, true ); // false for synchronous request
-    xmlHttp.send( null );
     return xmlHttp.responseText;
 }
 
