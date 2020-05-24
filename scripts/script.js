@@ -132,6 +132,7 @@ function httpGet(theUrl)
 }
 
 if(getCookie("points") < 0){
+	console.log("Yo");
 	httpGet("how-bro.html");
 }
 
@@ -139,51 +140,53 @@ if(getCookie("points") < 0){
 
 
 // Hiding sections until adequate knowledge is obtained.
-if(getCookie("points") < 5){
-	document.getElementById("Overview of Networking").setAttribute("hidden", "true");
-	document.getElementById("ON").innerHTML = "Locked until 5 Points";
+if(document.getElementById("CS372")){
+	if(getCookie("points") < 5){
+		document.getElementById("Overview of Networking").setAttribute("hidden", "true");
+		document.getElementById("ON").innerHTML = "Locked until 5 Points";
 
-	document.getElementById("Circuit Switching and Packet Switching").setAttribute("hidden", "true");
-	document.getElementById("CSPS").innerHTML = "Locked until 10 Points";
+		document.getElementById("Circuit Switching and Packet Switching").setAttribute("hidden", "true");
+		document.getElementById("CSPS").innerHTML = "Locked until 10 Points";
 
-	document.getElementById("Packet Switched vs. Circuit Switched Networks").setAttribute("hidden", "true");
-	document.getElementById("PSCSN").innerHTML = "Locked until 15 Points";
+		document.getElementById("Packet Switched vs. Circuit Switched Networks").setAttribute("hidden", "true");
+		document.getElementById("PSCSN").innerHTML = "Locked until 15 Points";
 
-	document.getElementById("Network Structure and Performance").setAttribute("hidden", "true");
-	document.getElementById("NSP").innerHTML = "Locked until 20 Points";
+		document.getElementById("Network Structure and Performance").setAttribute("hidden", "true");
+		document.getElementById("NSP").innerHTML = "Locked until 20 Points";
 
-	document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
-	document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
-} else if(getCookie("points") < 10){
-	document.getElementById("Circuit Switching and Packet Switching").setAttribute("hidden", "true");
-	document.getElementById("CSPS").innerHTML = "Locked until 10 Points";
+		document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
+		document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
+	} else if(getCookie("points") < 10){
+		document.getElementById("Circuit Switching and Packet Switching").setAttribute("hidden", "true");
+		document.getElementById("CSPS").innerHTML = "Locked until 10 Points";
 
-	document.getElementById("Packet Switched vs. Circuit Switched Networks").setAttribute("hidden", "true");
-	document.getElementById("PSCSN").innerHTML = "Locked until 15 Points";
+		document.getElementById("Packet Switched vs. Circuit Switched Networks").setAttribute("hidden", "true");
+		document.getElementById("PSCSN").innerHTML = "Locked until 15 Points";
 
-	document.getElementById("Network Structure and Performance").setAttribute("hidden", "true");
-	document.getElementById("NSP").innerHTML = "Locked until 20 Points";
+		document.getElementById("Network Structure and Performance").setAttribute("hidden", "true");
+		document.getElementById("NSP").innerHTML = "Locked until 20 Points";
 
-	document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
-	document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
-} else if(getCookie("points") < 15){
-	document.getElementById("Packet Switched vs. Circuit Switched Networks").setAttribute("hidden", "true");
-	document.getElementById("PSCSN").innerHTML = "Locked until 15 Points";
+		document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
+		document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
+	} else if(getCookie("points") < 15){
+		document.getElementById("Packet Switched vs. Circuit Switched Networks").setAttribute("hidden", "true");
+		document.getElementById("PSCSN").innerHTML = "Locked until 15 Points";
 
-	document.getElementById("Network Structure and Performance").setAttribute("hidden", "true");
-	document.getElementById("NSP").innerHTML = "Locked until 20 Points";
+		document.getElementById("Network Structure and Performance").setAttribute("hidden", "true");
+		document.getElementById("NSP").innerHTML = "Locked until 20 Points";
 
-	document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
-	document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
-} else if(getCookie("points") < 20){
-	document.getElementById("Network Structure and Performance").setAttribute("hidden", "true");
-	document.getElementById("NSP").innerHTML = "Locked until 20 Points";
+		document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
+		document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
+	} else if(getCookie("points") < 20){
+		document.getElementById("Network Structure and Performance").setAttribute("hidden", "true");
+		document.getElementById("NSP").innerHTML = "Locked until 20 Points";
 
-	document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
-	document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
-} else if(getCookie("points") < 25){
-	document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
-	document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
+		document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
+		document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
+	} else if(getCookie("points") < 25){
+		document.getElementById("Access Networks and Physical Media").setAttribute("hidden", "true");
+		document.getElementById("ANPM").innerHTML = "Locked until 25 Points";
+	}
 }
 
 
