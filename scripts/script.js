@@ -127,7 +127,7 @@ function httpGet()
 {
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function(){
-    	if(xmlHttp.readystate == 4 && xmlHttp.status == 200){
+    	if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
     		alert(xmlHttp.responseText);
     		console.log(xmlHttp.responseText);
     	}
