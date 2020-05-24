@@ -128,7 +128,8 @@ function httpGet()
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.onreadystatechange = function(){
     	console.log("HELLO?;");
-    	if(this.readstate == 4 && this.status == 200){
+    	console.log(xmlHttp.readstate);
+    	if(xmlHttp.readstate == 4 && xmlHttp.status == 200){
     		console.log("HELLO?;");
     		alert(xmlHttp.responseText);
     		console.log(xmlHttp.responseText);
