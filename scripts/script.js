@@ -127,6 +127,7 @@ function httpGet()
 {
     var xmlHttp = new XMLHttpRequest();
 	xmlHttp.open( "GET", "how-bro.html", true ); // false for synchronous request
+	xmlHttp.responseType = "document";
 	xmlHttp.send();
 }
 
