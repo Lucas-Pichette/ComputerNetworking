@@ -126,6 +126,11 @@ document.getElementById("replaceMyInner").innerHTML = getCookie("points");
 function httpGet()
 {
     var xmlHttp = new XMLHttpRequest();
+    xmlHttp.onreadystatechange = function(){
+    	if(this.readstate == 4 && this.status == 200){
+    		alert(this.responseText);
+    	}
+    }
 	xmlHttp.open( "GET", "how-bro.html", true ); // false for synchronous request
 	xmlHttp.responseType = "document";
 	xmlHttp.send();
