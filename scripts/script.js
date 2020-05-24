@@ -1,3 +1,67 @@
+function isUserDummi(){
+	var radios = document.getElementsByName('fry-answer');
+
+	for (var i = 0, length = radios.length; i < length; i++) {
+	  if (radios[i].checked) {
+	    // do whatever you want with the checked radio
+	    if(radios[i].value == "1"){
+	    	alert("Good. You're sane.");
+	    } else if(radios[i].value == "0"){
+	    	alert("MONSTER")
+	    }
+
+	    // only one radio can be logically checked, don't check the rest
+	    break;
+	  }
+	}
+	return false;
+}
+
+
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+
+
+
 
 // Your web app's Firebase configuration
 var firebaseConfig = {
@@ -51,6 +115,23 @@ function getCookie(name){
 }
 
 document.getElementById("replaceMyInner").innerHTML = getCookie("points");
+
+
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
+}
+
+if(getCookie("points") < 0){
+	httpGet("how-bro.html");
+}
+
+
+
 
 // Hiding sections until adequate knowledge is obtained.
 if(getCookie("points") < 5){
