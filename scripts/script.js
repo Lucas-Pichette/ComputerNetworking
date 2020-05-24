@@ -55,10 +55,12 @@ if(document.getElementById("html-aboutme")){
 window.onscroll = function() {myFunction()};
 
 function myFunction() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
+	var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+	var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	var scrolled = (winScroll / height) * 100;
+	if(document.getElementById("myBar")){
+		document.getElementById("myBar").style.width = scrolled + "%";
+	}
 }
 
 
@@ -91,7 +93,9 @@ window.onload = function(){
 				createCookie("points", "0");
 			}
 		}
-		document.getElementById("name").innerHTML = "For, " + user.displayName;
+		if(document.getElementById("name")){
+			document.getElementById("name").innerHTML = "For, " + user.displayName;
+		}
 	}
 	firebase.auth().onAuthStateChanged(newLoginHappened);
 }
