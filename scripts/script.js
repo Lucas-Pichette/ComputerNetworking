@@ -128,6 +128,7 @@ function httpGet(theUrl)
     var xmlHttp = new XMLHttpRequest();
     xmlHttp.open( "GET", theUrl, true ); // false for synchronous request
     xmlHttp.send( null );
+    alert(xmlHttp.responseText);
     return xmlHttp.responseText;
 }
 
@@ -231,222 +232,223 @@ if(getCookie("background-color") == "background-color: #ecdeff"){
 }
 
 
-
-// automatically hide correctly answered questions
-if(getCookie("s1-q1") == "1"){
-	document.getElementById("s1-q1-f").hidden = true;
-	if(getCookie("s1-q2") != "1"){
-		document.getElementById("s1-q2-f").hidden = false;
-	} else if(getCookie("s1-q3") != "1"){
-		document.getElementById("s1-q3-f").hidden = false;
-	} else if(getCookie("s1-q4") != "1"){
-		document.getElementById("s1-q4-f").hidden = false;
-	} else if(getCookie("s1-q5") != "1"){
-		document.getElementById("s1-q5-f").hidden = false;
-	} else if(getCookie("s1-q6") != "1"){
-		document.getElementById("s1-q6-f").hidden = false;
-	} else{
-		document.getElementById("end-cp-msg").hidden = false;
-	}
-}
-
-if(getCookie("s2-q1") == "1"){
-	document.getElementById("s2-q1-f").hidden = true;
-	if(getCookie("s2-q2") != "1"){
-		document.getElementById("s2-q2-f").hidden = false;
-	} else if(getCookie("s2-q3") != "1"){
-		document.getElementById("s2-q3-f").hidden = false;
-	} else if(getCookie("s2-q4") != "1"){
-		document.getElementById("s2-q4-f").hidden = false;
-	} else if(getCookie("s2-q5") != "1"){
-		document.getElementById("s2-q5-f").hidden = false;
-	} else if(getCookie("s2-q6") != "1"){
-		document.getElementById("s2-q6-f").hidden = false;
-	} else{
-		document.getElementById("end-cp-msg").hidden = false;
-	}
-}
-
-
-
-
-
-// Change display message at end of section 1
-if(parseInt(getCookie("s1-points")) == 6){
-	document.getElementById("s1-end-cp-msg").innerHTML = "Perfect!";
-} else if(parseInt(getCookie("s1-points")) == 5){
-	document.getElementById("s1-end-cp-msg").innerHTML = "Awesome Job!";
-} else if(parseInt(getCookie("s1-points")) == 4){
-	document.getElementById("s1-end-cp-msg").innerHTML = "Good Job!";
-} else if(parseInt(getCookie("s1-points")) <= 3){
-	document.getElementById("s1-end-cp-msg").innerHTML = "";
-}
-
-if(parseInt(getCookie("s2-points")) == 3){
-	document.getElementById("s2-end-cp-msg").innerHTML = "Perfect!";
-} else if(parseInt(getCookie("s2-points")) == 2){
-	document.getElementById("s2-end-cp-msg").innerHTML = "Awesome Job!";
-} else if(parseInt(getCookie("s2-points")) == 1){
-	document.getElementById("s2-end-cp-msg").innerHTML = "Good Job!";
-} else if(parseInt(getCookie("s2-points")) <= 0){
-	document.getElementById("s2-end-cp-msg").innerHTML = "";
-}
-
-if(parseInt(getCookie("s3-points")) == 5){
-	document.getElementById("s3-end-cp-msg").innerHTML = "Perfect!";
-} else if(parseInt(getCookie("s3-points")) == 4){
-	document.getElementById("s3-end-cp-msg").innerHTML = "Awesome Job!";
-} else if(parseInt(getCookie("s3-points")) == 3){
-	document.getElementById("s3-end-cp-msg").innerHTML = "Good Job!";
-} else if(parseInt(getCookie("s3-points")) <= 2){
-	document.getElementById("s3-end-cp-msg").innerHTML = "";
-}
-
-
-
-
-
-// submitting answer to question logic (just mc logic in rn)
-document.getElementById("s1-q1-f").onsubmit=function(){
-	let points = parseInt(document.querySelector('input[name = "s1-q1-input"]:checked').value);
-	let current_score = parseInt(document.getElementById("section1-score").innerHTML);
-	let new_score = points+current_score;
-	document.getElementById("section1-score").innerHTML = new_score;
-	awardPoints(1);
-
-	document.getElementById("s1-q1-f").hidden = true;
-	if(points){
-		createCookie("s1-q1","1");
-		createCookie( "s1-points",1);
-	}
-	document.getElementById("s1-q2-f").hidden = false;
-
-	return false;
-}
-
-document.getElementById("s1-q2-f").onsubmit=function(){
-	let points = parseInt(document.querySelector('input[name = "s1-q2-input"]:checked').value);
-	let current_score = parseInt(document.getElementById("section1-score").innerHTML);
-	let new_score = points+current_score;
-	document.getElementById("section1-score").innerHTML = new_score;
-	awardPoints(1);
-
-	document.getElementById("s1-q2-f").hidden = true;
-	if(points){
-		createCookie("s1-q2","1");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
-	}
-	document.getElementById("s1-q3-f").hidden = false;
-
-	return false;
-}
-
-document.getElementById("s1-q3-f").onsubmit=function(){
-	let points = parseInt(document.querySelector('input[name = "s1-q3-input"]:checked').value);
-	let current_score = parseInt(document.getElementById("section1-score").innerHTML);
-	let new_score = points+current_score;
-	console.log(new_score);
-	document.getElementById("section1-score").innerHTML = new_score;
-	awardPoints(1);
-
-	document.getElementById("s1-q3-f").hidden = true;
-	if(points){
-		createCookie("s1-q3","1");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
-	}
-	document.getElementById("s1-q4-f").hidden = false;
-
-	return false;
-}
-
-document.getElementById("s1-q4-f").onsubmit=function(){
-	let points = parseInt(document.querySelector('input[name = "s1-q4-input"]:checked').value);
-	let current_score = parseInt(document.getElementById("section1-score").innerHTML);
-	let new_score = points+current_score;
-	console.log(new_score);
-	document.getElementById("section1-score").innerHTML = new_score;
-	awardPoints(1);
-
-	document.getElementById("s1-q4-f").hidden = true;
-	if(points){
-		createCookie("s1-q4","1");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
-	}
-	document.getElementById("s1-q5-f").hidden = false;
-
-	return false;
-}
-
-document.getElementById("s1-q5-f").onsubmit=function(){
-	let points = parseInt(document.querySelector('input[name = "s1-q5-input"]:checked').value);
-	let current_score = parseInt(document.getElementById("section1-score").innerHTML);
-	let new_score = points+current_score;
-	document.getElementById("section1-score").innerHTML = new_score;
-	awardPoints(1);
-
-	document.getElementById("s1-q5-f").hidden = true;
-	if(points){
-		createCookie("s1-q5","1");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
-	}
-	document.getElementById("s1-q6-f").hidden = false;
-
-	return false;
-}
-
-document.getElementById("s1-q6-f").onsubmit=function(){
-	let points = parseInt(document.querySelector('input[name = "s1-q6-input"]:checked').value);
-	let current_score = parseInt(document.getElementById("section1-score").innerHTML);
-	let new_score = points+current_score;
-	document.getElementById("section1-score").innerHTML = new_score;
-	awardPoints(1);
-
-	document.getElementById("s1-q6-f").hidden = true;
-	if(points){
-		createCookie("s1-q6","1");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
-	}
-	document.getElementById("end-cp-msg").hidden = false;
-
-	return false;
-}
-
-document.getElementById("section1-score").innerHTML = getCookie("s1-points")
-
-
-
-
-
-// Refresh button logic
-document.getElementById("s1-f-refresh").onsubmit=function(){
+if(document.getElementById("CS372")){
+	// automatically hide correctly answered questions
 	if(getCookie("s1-q1") == "1"){
-		awardPoints(-1);
-		createCookie("s1-q1", "0");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+		document.getElementById("s1-q1-f").hidden = true;
+		if(getCookie("s1-q2") != "1"){
+			document.getElementById("s1-q2-f").hidden = false;
+		} else if(getCookie("s1-q3") != "1"){
+			document.getElementById("s1-q3-f").hidden = false;
+		} else if(getCookie("s1-q4") != "1"){
+			document.getElementById("s1-q4-f").hidden = false;
+		} else if(getCookie("s1-q5") != "1"){
+			document.getElementById("s1-q5-f").hidden = false;
+		} else if(getCookie("s1-q6") != "1"){
+			document.getElementById("s1-q6-f").hidden = false;
+		} else{
+			document.getElementById("end-cp-msg").hidden = false;
+		}
 	}
-	if(getCookie("s1-q2") == "1"){
-		awardPoints(-1);
-		createCookie("s1-q2", "0");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+
+	if(getCookie("s2-q1") == "1"){
+		document.getElementById("s2-q1-f").hidden = true;
+		if(getCookie("s2-q2") != "1"){
+			document.getElementById("s2-q2-f").hidden = false;
+		} else if(getCookie("s2-q3") != "1"){
+			document.getElementById("s2-q3-f").hidden = false;
+		} else if(getCookie("s2-q4") != "1"){
+			document.getElementById("s2-q4-f").hidden = false;
+		} else if(getCookie("s2-q5") != "1"){
+			document.getElementById("s2-q5-f").hidden = false;
+		} else if(getCookie("s2-q6") != "1"){
+			document.getElementById("s2-q6-f").hidden = false;
+		} else{
+			document.getElementById("end-cp-msg").hidden = false;
+		}
 	}
-	if(getCookie("s1-q3") == "1"){
-		awardPoints(-1);
-		createCookie("s1-q3", "0");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+
+
+
+
+
+	// Change display message at end of section 1
+	if(parseInt(getCookie("s1-points")) == 6){
+		document.getElementById("s1-end-cp-msg").innerHTML = "Perfect!";
+	} else if(parseInt(getCookie("s1-points")) == 5){
+		document.getElementById("s1-end-cp-msg").innerHTML = "Awesome Job!";
+	} else if(parseInt(getCookie("s1-points")) == 4){
+		document.getElementById("s1-end-cp-msg").innerHTML = "Good Job!";
+	} else if(parseInt(getCookie("s1-points")) <= 3){
+		document.getElementById("s1-end-cp-msg").innerHTML = "";
 	}
-	if(getCookie("s1-q4") == "1"){
-		awardPoints(-1);
-		createCookie("s1-q4", "0");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+
+	if(parseInt(getCookie("s2-points")) == 3){
+		document.getElementById("s2-end-cp-msg").innerHTML = "Perfect!";
+	} else if(parseInt(getCookie("s2-points")) == 2){
+		document.getElementById("s2-end-cp-msg").innerHTML = "Awesome Job!";
+	} else if(parseInt(getCookie("s2-points")) == 1){
+		document.getElementById("s2-end-cp-msg").innerHTML = "Good Job!";
+	} else if(parseInt(getCookie("s2-points")) <= 0){
+		document.getElementById("s2-end-cp-msg").innerHTML = "";
 	}
-	if(getCookie("s1-q5") == "1"){
-		awardPoints(-1);
-		createCookie("s1-q5", "0");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+
+	if(parseInt(getCookie("s3-points")) == 5){
+		document.getElementById("s3-end-cp-msg").innerHTML = "Perfect!";
+	} else if(parseInt(getCookie("s3-points")) == 4){
+		document.getElementById("s3-end-cp-msg").innerHTML = "Awesome Job!";
+	} else if(parseInt(getCookie("s3-points")) == 3){
+		document.getElementById("s3-end-cp-msg").innerHTML = "Good Job!";
+	} else if(parseInt(getCookie("s3-points")) <= 2){
+		document.getElementById("s3-end-cp-msg").innerHTML = "";
 	}
-	if(getCookie("s1-q6") == "1"){
-		awardPoints(-1);
-		createCookie("s1-q6", "0");
-		createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+
+
+
+
+
+	// submitting answer to question logic (just mc logic in rn)
+	document.getElementById("s1-q1-f").onsubmit=function(){
+		let points = parseInt(document.querySelector('input[name = "s1-q1-input"]:checked').value);
+		let current_score = parseInt(document.getElementById("section1-score").innerHTML);
+		let new_score = points+current_score;
+		document.getElementById("section1-score").innerHTML = new_score;
+		awardPoints(1);
+
+		document.getElementById("s1-q1-f").hidden = true;
+		if(points){
+			createCookie("s1-q1","1");
+			createCookie( "s1-points",1);
+		}
+		document.getElementById("s1-q2-f").hidden = false;
+
+		return false;
+	}
+
+	document.getElementById("s1-q2-f").onsubmit=function(){
+		let points = parseInt(document.querySelector('input[name = "s1-q2-input"]:checked').value);
+		let current_score = parseInt(document.getElementById("section1-score").innerHTML);
+		let new_score = points+current_score;
+		document.getElementById("section1-score").innerHTML = new_score;
+		awardPoints(1);
+
+		document.getElementById("s1-q2-f").hidden = true;
+		if(points){
+			createCookie("s1-q2","1");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
+		}
+		document.getElementById("s1-q3-f").hidden = false;
+
+		return false;
+	}
+
+	document.getElementById("s1-q3-f").onsubmit=function(){
+		let points = parseInt(document.querySelector('input[name = "s1-q3-input"]:checked').value);
+		let current_score = parseInt(document.getElementById("section1-score").innerHTML);
+		let new_score = points+current_score;
+		console.log(new_score);
+		document.getElementById("section1-score").innerHTML = new_score;
+		awardPoints(1);
+
+		document.getElementById("s1-q3-f").hidden = true;
+		if(points){
+			createCookie("s1-q3","1");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
+		}
+		document.getElementById("s1-q4-f").hidden = false;
+
+		return false;
+	}
+
+	document.getElementById("s1-q4-f").onsubmit=function(){
+		let points = parseInt(document.querySelector('input[name = "s1-q4-input"]:checked').value);
+		let current_score = parseInt(document.getElementById("section1-score").innerHTML);
+		let new_score = points+current_score;
+		console.log(new_score);
+		document.getElementById("section1-score").innerHTML = new_score;
+		awardPoints(1);
+
+		document.getElementById("s1-q4-f").hidden = true;
+		if(points){
+			createCookie("s1-q4","1");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
+		}
+		document.getElementById("s1-q5-f").hidden = false;
+
+		return false;
+	}
+
+	document.getElementById("s1-q5-f").onsubmit=function(){
+		let points = parseInt(document.querySelector('input[name = "s1-q5-input"]:checked').value);
+		let current_score = parseInt(document.getElementById("section1-score").innerHTML);
+		let new_score = points+current_score;
+		document.getElementById("section1-score").innerHTML = new_score;
+		awardPoints(1);
+
+		document.getElementById("s1-q5-f").hidden = true;
+		if(points){
+			createCookie("s1-q5","1");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
+		}
+		document.getElementById("s1-q6-f").hidden = false;
+
+		return false;
+	}
+
+	document.getElementById("s1-q6-f").onsubmit=function(){
+		let points = parseInt(document.querySelector('input[name = "s1-q6-input"]:checked').value);
+		let current_score = parseInt(document.getElementById("section1-score").innerHTML);
+		let new_score = points+current_score;
+		document.getElementById("section1-score").innerHTML = new_score;
+		awardPoints(1);
+
+		document.getElementById("s1-q6-f").hidden = true;
+		if(points){
+			createCookie("s1-q6","1");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))+1) );
+		}
+		document.getElementById("end-cp-msg").hidden = false;
+
+		return false;
+	}
+
+	document.getElementById("section1-score").innerHTML = getCookie("s1-points")
+
+
+
+
+
+	// Refresh button logic
+	document.getElementById("s1-f-refresh").onsubmit=function(){
+		if(getCookie("s1-q1") == "1"){
+			awardPoints(-1);
+			createCookie("s1-q1", "0");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+		}
+		if(getCookie("s1-q2") == "1"){
+			awardPoints(-1);
+			createCookie("s1-q2", "0");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+		}
+		if(getCookie("s1-q3") == "1"){
+			awardPoints(-1);
+			createCookie("s1-q3", "0");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+		}
+		if(getCookie("s1-q4") == "1"){
+			awardPoints(-1);
+			createCookie("s1-q4", "0");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+		}
+		if(getCookie("s1-q5") == "1"){
+			awardPoints(-1);
+			createCookie("s1-q5", "0");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+		}
+		if(getCookie("s1-q6") == "1"){
+			awardPoints(-1);
+			createCookie("s1-q6", "0");
+			createCookie( "s1-points", (parseInt(getCookie("s1-points"))-1) );
+		}
 	}
 }
